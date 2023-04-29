@@ -23,4 +23,4 @@ def calculate_score(player_or_dealer_hand):
 # TODO 2: Add function that caculates score into variable via parameter
 # def add_score(score, hand):
 #     score = calculate_score(hand)
-#     print(f"Your current hand: {hand}, current score: {score}")
+#     # print(f"Your current hand: {hand}, current score: {score}")
