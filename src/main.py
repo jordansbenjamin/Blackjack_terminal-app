@@ -2,7 +2,7 @@
 from clear import clear
 from art import logo
 from player import player_, player_hand
-from dealer import dealer_, dealer_cards
+from dealer import dealer_, dealer_hand
 from cards import init_deck, deal_card
 
 # TODO 1: Create a function that will serve as the main function body of the program that will include other parts, sections and functions of the program, this main function will serve as the main flow running the program
@@ -11,7 +11,7 @@ def play_blackjack():
     print(logo)
 
     deal_card(2, player_hand)
-    deal_card(2, dealer_cards)
+    deal_card(2, dealer_hand)
     player_()
     dealer_()
 
