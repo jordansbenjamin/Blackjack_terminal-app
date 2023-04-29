@@ -1,6 +1,7 @@
 ##### MAIN SECTION #####
 from clear import clear_screen
 from art import logo
+from calculate import calculate_score
 from player import player_turn, player_hand
 from dealer import dealer_turn, dealer_hand
 from cards import init_deck, deal_card
@@ -10,9 +11,12 @@ def play_blackjack():
     # TODO LATE: Add game logo here
     print(logo)
 
+    # Both player and dealer initially gets dealt 2 cards
     deal_card(2, player_hand)
     deal_card(2, dealer_hand)
+    # Start of players turn
     player_turn()
+    # Start of dealers turn
     dealer_turn()
 
 # TODO 2: Initialise the deck
