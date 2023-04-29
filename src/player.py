@@ -5,7 +5,7 @@ from cards import deal_card
 # TODO 1: Create empty player cards list
 player_hand = []
 # TODO 2: Create players function which involves logic of players turns and play
-def player_():
+def player_turn():
     # TODO 3: Calculate score
     player_score = calculate_score(player_hand)
     # TODO 4: Display hand and current score

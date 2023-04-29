@@ -6,7 +6,7 @@ from player import player_hand
 # TODO 1: Create empty dealer cards list
 dealer_hand = []
 # TODO 2: Create dealers function which involves logic of dealers turns and play
-def dealer_():
+def dealer_turn():
     dealer_score = calculate_score(dealer_hand)
     player_score = calculate_score(player_hand)
     # TODO 3: Dealer doesn't have to draw another card if certain conditions are met: Player bust, dealer score higher, or dealer has BJ

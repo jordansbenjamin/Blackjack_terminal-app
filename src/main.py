@@ -1,8 +1,8 @@
 ##### MAIN SECTION #####
 from clear import clear_screen
 from art import logo
-from player import player_, player_hand
-from dealer import dealer_, dealer_hand
+from player import player_turn, player_hand
+from dealer import dealer_turn, dealer_hand
 from cards import init_deck, deal_card
 
 # TODO 1: Create a function that will serve as the main function body of the program that will include other parts, sections and functions of the program, this main function will serve as the main flow running the program
@@ -12,8 +12,8 @@ def play_blackjack():
 
     deal_card(2, player_hand)
     deal_card(2, dealer_hand)
-    player_()
-    dealer_()
+    player_turn()
+    dealer_turn()
 
 # TODO 2: Initialise the deck
 init_deck()
