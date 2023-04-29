@@ -4,7 +4,7 @@ from cards import deal_card
 
 # TODO 1: Create empty player cards list
 player_cards = []
-# TODO 2: Create players function which involves logic of players turns
+# TODO 2: Create players function which involves logic of players turns and play
 def player_():
     # TODO 3: Calculate score
     player_score = calculate_score(player_cards)
