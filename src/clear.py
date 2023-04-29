@@ -2,7 +2,7 @@
 from platform import system as system_name
 from subprocess import call as system_call
 
-def clear():
+def clear_screen():
     """
     Function to clear terminal screen on windows, linux and mac.
     """

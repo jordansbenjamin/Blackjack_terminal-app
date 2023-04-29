@@ -1,5 +1,5 @@
 ##### MAIN SECTION #####
-from clear import clear
+from clear import clear_screen
 from art import logo
 from player import player_, player_hand
 from dealer import dealer_, dealer_hand
@@ -26,7 +26,7 @@ while True:
         # TODO LATER: Add clear function here
         player_hand.clear()
         dealer_hand.clear()
-        clear()
+        clear_screen()
         play_blackjack()
     elif play == 'no':
         break
