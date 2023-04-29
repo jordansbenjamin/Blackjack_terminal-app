@@ -1,6 +1,7 @@
 ##### DEALER SECTION #####
 from calculate import calculate_score
 from cards import draw_card
+from player import player_cards
 
 # TODO 1: Create empty dealer cards list
 dealer_cards = []

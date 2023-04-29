@@ -1,6 +1,4 @@
 #### CARDS SECTION ####
-# from numpy import shuffle
-# import random
 import numpy as np
 
 # TODO 1: Create dictionary of cards
@@ -33,18 +31,12 @@ def init_deck():
             deck.append(cards)
     np.random.shuffle(deck)
 
-# init_deck()
-# print(deck)
-
 # TODO 5: Create a function that draws a card from the deck, check condition if deck of cards is empty then initialise the deck, otherwise pop the card from the deck and return that card
 def draw_card():
     if len(deck) == 0:
         init_deck()
     card = deck.pop(0)
     return card
-
-# u_card = draw_card()
-# print(u_card)
 
 # TODO 6: Create a function that adds drawn card for both player and dealer
 def deal_card(n, hand):
