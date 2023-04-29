@@ -24,7 +24,6 @@ def player_():
         elif player_score > 21:
             return
 
-deal_card(2, player_cards)
-player_()
+
 
 
