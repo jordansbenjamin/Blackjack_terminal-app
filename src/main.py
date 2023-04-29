@@ -24,6 +24,8 @@ while True:
     
     if play == 'yes':
         # TODO LATER: Add clear function here
+        player_hand.clear()
+        dealer_hand.clear()
         clear()
         play_blackjack()
     elif play == 'no':
