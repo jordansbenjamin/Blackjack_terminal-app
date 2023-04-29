@@ -5,6 +5,7 @@ from calculate import calculate_score
 from player import player_turn, player_hand
 from dealer import dealer_turn, dealer_hand
 from cards import init_deck, deal_card
+from winner import determine_winner
 
 # TODO 1: Create a function that will serve as the main function body of the program that will include other parts, sections and functions of the program, this main function will serve as the main flow running the program
 def play_blackjack():
@@ -27,6 +28,8 @@ def play_blackjack():
     player_turn()
     # Start of dealers turn
     dealer_turn()
+    # Determines winner and displays outcome of the game
+    determine_winner()
 
 # TODO 2: Initialise the deck
 init_deck()
