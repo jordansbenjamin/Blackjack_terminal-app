@@ -45,3 +45,5 @@ def draw_card():
 
 # u_card = draw_card()
 # print(u_card)
+
+# TODO 6: Create a function that adds drawn card for both player and dealer

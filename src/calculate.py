@@ -8,11 +8,9 @@ def calculate_score(player_or_dealer_cards):
     cards = []
     for card in player_or_dealer_cards:
         cards.append(card[1:])
-
     # TODO 3: Convert any picture cards to a score of 10 and Ace to 11 using the cards dictionary
     for card in cards:
         score += cards_dict[card]
-
     # TODO 4: If Ace card/s are found and score is over 21, count Ace as 1 instead of 11
     aces = cards.count('A')
     for i in range(aces):
