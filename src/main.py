@@ -14,6 +14,12 @@ def play_blackjack():
     # Both player and dealer initially gets dealt 2 cards
     deal_card(2, player_hand)
     deal_card(2, dealer_hand)
+
+    player_score = calculate_score(player_hand)
+    print(f"Your first hand: {player_hand}, current score: {player_score}")
+    dealer_score = calculate_score(dealer_hand)
+    print(f"Dealers first card: {dealer_hand[0]}, current score: {dealer_score}")
+
     # Start of players turn
     player_turn()
     # Start of dealers turn
