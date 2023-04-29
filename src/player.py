@@ -1,6 +1,6 @@
 ##### PLAYER SECTION #####
 from calculate import calculate_score
-from cards import add_drawn_card
+from cards import deal_card
 
 # TODO 1: Create empty player cards list
 player_cards = []
@@ -17,14 +17,14 @@ def player_():
     # TODO 6: Create while loop to prompt player if they want to draw a card, if players score is 21 or over, players turn ends
     while input("Do you want to 'hit' for another card or 'pass' your turn? ") == 'hit':
         print("\n")
-        add_drawn_card(1, player_cards)
+        deal_card(1, player_cards)
         player_score = calculate_score(player_cards)
         if player_score == 21:
             return
         elif player_score > 21:
             return
 
-add_drawn_card(2, player_cards)
+deal_card(2, player_cards)
 player_()
 
 
