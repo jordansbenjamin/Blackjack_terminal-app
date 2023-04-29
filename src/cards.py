@@ -47,3 +47,7 @@ def draw_card():
 # print(u_card)
 
 # TODO 6: Create a function that adds drawn card for both player and dealer
+def add_drawn_card(n, hand):
+    for i in range(n):
+        card = draw_card()
+        hand.append(card)
