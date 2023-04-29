@@ -1,7 +1,7 @@
 ##### MAIN SECTION #####
 from clear import clear
 from art import logo
-from player import player_, player_cards
+from player import player_, player_hand
 from dealer import dealer_, dealer_cards
 from cards import init_deck, deal_card
 
@@ -10,7 +10,7 @@ def play_blackjack():
     # TODO LATE: Add game logo here
     print(logo)
 
-    deal_card(2, player_cards)
+    deal_card(2, player_hand)
     deal_card(2, dealer_cards)
     player_()
     dealer_()
