@@ -29,7 +29,8 @@ def play_blackjack():
     # Start of dealers turn
     dealer_turn()
     # Determines winner and displays outcome of the game
-    determine_winner()
+    winner = determine_winner()
+    print(winner)
 
 # TODO 2: Initialise the deck
 init_deck()
