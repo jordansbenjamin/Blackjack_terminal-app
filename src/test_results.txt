@@ -2,7 +2,7 @@ CALCULATE SCORE TESTS
 
 FIRST TEST IS A PASS
 
-NOTE: This test was conducted as a trial test to make sure pytest is working its magic correctly, turns out I had to use the command (pytest -s)
+NOTE: This test was conducted as a trial test to make sure pytest is working its magic correctly, turns out I had to use the command (pytest -s) as it gave me this error (ERROR test_blackjack.py - OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.)
 
 ============================================================ test session starts =============================================================
 platform darwin -- Python 3.11.2, pytest-7.3.1, pluggy-1.0.0
