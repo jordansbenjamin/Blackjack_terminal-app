@@ -6,8 +6,7 @@ from player import player_turn, player_hand
 from dealer import dealer_turn, dealer_hand
 from cards import init_deck, deal_card
 from winner import determine_winner
-from menu import menu
-from instructions import instructions
+from menu import menu, instructions
 
 # TODO 1: Create a function that will serve as the main function body of the program that will include other parts, sections and functions of the program, this main function will serve as the main flow running the program
 def play_blackjack():
