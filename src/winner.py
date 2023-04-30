@@ -14,6 +14,7 @@ def determine_winner():
     print("\n")
     print(f"Your final hand: {player_hand}, final score: {player_score}")
     print(f"Dealers final hand: {dealer_hand}, final score: {dealer_score}")
+    print("\n")
     # TODO 4: Determine condition of winner/loser based on Natural Blackjack, which means that they have a 21 from the first cards dealt, return their outcome
     if player_score == 21 and len(player_hand) == 2:
         return "Instant win! With a natural Blackjack 🤠"
