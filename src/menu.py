@@ -1,5 +1,6 @@
 ##### MENU SECTION #####
 from clear import clear_screen
+from art import instruction_logo
 
 # TODO 1: Create menu function displaying all the list of menu items to select from
 def menu():
@@ -15,6 +16,8 @@ def menu():
 # TODO 3: Create a function that stores information of the games instructions
 def instructions():
     clear_screen()
+    print(instruction_logo)
+    # print("\n")
     print("""
     The premise of the game is simple, get as close to 21 as possible without going over.
     As the player you will be dealt 2 cards, the dealer will also have 2 cards.
@@ -25,7 +28,7 @@ def instructions():
     The game will end if either the players or dealers final hand score is over 21.
     The game will end if either player or dealers final hand score is less than each others.
     """)
-    print("\n")
+    # print("\n")
 
     back = input("Press 'b' to go back to the Main Menu: ")
 

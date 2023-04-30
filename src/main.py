@@ -1,6 +1,6 @@
 ##### MAIN SECTION #####
 from clear import clear_screen
-from art import logo
+from art import main_logo
 from calculate import calculate_score
 from player import player_turn, player_hand
 from dealer import dealer_turn, dealer_hand
@@ -11,7 +11,7 @@ from menu import menu, instructions
 # TODO 1: Create a function that will serve as the main function body of the program that will include other parts, sections and functions of the program, this main function will serve as the main flow running the program
 def play_blackjack():
     # TODO LATE: Add game logo here
-    print(logo)
+    print(main_logo)
 
     # Both player and dealer initially gets dealt 2 cards
     deal_card(2, player_hand)
@@ -70,7 +70,7 @@ def main_menu():
     user_choice = ''
     # TODO NEW 2: Create a while loop for the menu
     while user_choice != '5':
-        print(logo)
+        print(main_logo)
         print("Welcome to Blackjack ♠️ Please choose from the following options:")
         # print("\n")
         user_choice = menu()
@@ -82,7 +82,6 @@ def main_menu():
                 clear_screen()
                 play_blackjack()
             case '2':
-                print("You are viewing the instructions.")
                 instructions()
             case '3':
                 print("You are viewing the house rules.")
