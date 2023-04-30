@@ -1,6 +1,6 @@
 ##### MENU SECTION #####
 from clear import clear_screen
-from art import instruction_logo
+from art import instruction_logo, rules_logo
 
 # TODO 1: Create menu function displaying all the list of menu items to select from
 def menu():
@@ -38,3 +38,22 @@ def instructions():
             return
 
 # TODO 4: Create a function that stores the house rules of the game
+def rules():
+    clear_screen()
+    print(rules_logo)
+    print("""
+    The deck size is the original 52 cards including suits.
+    The Jack/Queen/King all count as 10.
+    The Ace can count as 11 or 1.
+    There are no jokers.
+    The deck of cards will be shuffled before starting a game.
+    Cards are removed from the deck as they are drawn.
+    The dealer is the computer.
+    """)
+
+    back = input("Press 'b' to go back to the Main Menu: ")
+
+    match back:
+        case 'b':
+            clear_screen()
+            return
