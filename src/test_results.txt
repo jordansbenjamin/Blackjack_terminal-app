@@ -1,0 +1,16 @@
+CALCULATE SCORE TESTS
+
+FIRST TEST IS A PASS
+
+NOTE: This test was conducted as a trial test to make sure pytest is working its magic correctly, turns out I had to use the command (pytest -s)
+
+============================================================ test session starts =============================================================
+platform darwin -- Python 3.11.2, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+collecting ... 
+
+collected 1 item                                                                                                                             
+
+test_blackjack.py .
+
+============================================================= 1 passed in 10.47s =============================================================
