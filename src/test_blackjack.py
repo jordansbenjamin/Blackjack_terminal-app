@@ -28,5 +28,5 @@ def test_calculate_score():
     # Expected score
     player_score = 28
     # Expected Result: Pass
-    assert calculate_score(dealer_hand) == dealer_score
+    assert calculate_score(player_hand) == player_score
     # Result: ✅
