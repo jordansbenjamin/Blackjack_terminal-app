@@ -67,12 +67,13 @@ init_deck()
 #         print("Invalid input, please enter 'yes' or 'no'.")
 
 def main_menu():
-    print(logo)
     # TODO NEW 1: Create an empty string for user choice variable
     user_choice = ''
     # TODO NEW 2: Create a while loop for the menu
     while user_choice != '5':
-
+        print(logo)
+        print("Welcome to Blackjack ♠️ Please choose from the following options:")
+        # print("\n")
         user_choice = menu()
         # TODO NEW 3: Add match case to check user choices
         match user_choice:
