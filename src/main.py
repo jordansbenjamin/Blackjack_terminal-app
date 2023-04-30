@@ -88,3 +88,5 @@ while user_choice != '5':
             break
         case _:
             print("Invalid input")
+    
+    # input("Press ENTER to continue")

@@ -10,3 +10,7 @@ def main_menu():
     # TODO 2: Prompt user for their selection and return selection
     choice = input("Choose an option from the menu: ")
     return choice
+
+# TODO 3: Create a function that stores information of the games instructions
+
+# TODO 4: Create a function that stores the house rules of the game
