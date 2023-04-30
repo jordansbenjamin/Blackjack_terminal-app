@@ -6,7 +6,7 @@ from player import player_turn, player_hand
 from dealer import dealer_turn, dealer_hand
 from cards import init_deck, deal_card
 from winner import determine_winner
-from menu import main_menu
+from menu import menu
 
 # TODO 1: Create a function that will serve as the main function body of the program that will include other parts, sections and functions of the program, this main function will serve as the main flow running the program
 def play_blackjack():
@@ -65,28 +65,31 @@ init_deck()
 #     else:
 #         print("Invalid input, please enter 'yes' or 'no'.")
 
-# TODO NEW 1: Create an empty string for user choice variable
-user_choice = ''
-# TODO NEW 2: Create a while loop for the menu
-while user_choice != '5':
+def main_menu():
+    # TODO NEW 1: Create an empty string for user choice variable
+    user_choice = ''
+    # TODO NEW 2: Create a while loop for the menu
+    while user_choice != '5':
 
-    user_choice = main_menu()
-    # TODO NEW 3: Add match case to check user choices
-    match user_choice:
-        case '1':
-            player_hand.clear()
-            dealer_hand.clear()
-            clear_screen()
-            play_blackjack()
-        case '2':
-            print("You are viewing the instructions.")
-        case '3':
-            print("You are viewing the house rules.")
-        case '4':
-            print("You are viewing the score history.")
-        case '5':
-            break
-        case _:
-            print("Invalid input")
+        user_choice = menu()
+        # TODO NEW 3: Add match case to check user choices
+        match user_choice:
+            case '1':
+                player_hand.clear()
+                dealer_hand.clear()
+                clear_screen()
+                play_blackjack()
+            case '2':
+                print("You are viewing the instructions.")
+            case '3':
+                print("You are viewing the house rules.")
+            case '4':
+                print("You are viewing the score history.")
+            case '5':
+                break
+            case _:
+                print("Invalid input")
     
     # input("Press ENTER to continue")
+
+main_menu()

@@ -2,7 +2,7 @@
 from clear import clear_screen
 
 # TODO 1: Create menu function displaying all the list of menu items to select from
-def main_menu():
+def menu():
     print("1. Enter 1 to start playing Blackjack")
     print("2. Enter 2 to view instructions")
     print("3. Enter 3 to view house rules")
@@ -14,6 +14,7 @@ def main_menu():
 
 # TODO 3: Create a function that stores information of the games instructions
 def instructions():
+    clear_screen()
     print("""
     The premise of the game is simple, get as close to 21 as possible without going over.
     As the player you will be dealt 2 cards, the dealer will also have 2 cards.
@@ -31,6 +32,6 @@ def instructions():
     match back:
         case 'b':
             clear_screen()
-            
+
 
 # TODO 4: Create a function that stores the house rules of the game
