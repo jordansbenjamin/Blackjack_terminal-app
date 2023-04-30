@@ -69,7 +69,7 @@ init_deck()
 user_choice = ''
 # TODO NEW 2: Create a while loop for the menu
 while user_choice != '5':
-    
+
     user_choice = main_menu()
     # TODO NEW 3: Add match case to check user choices
     match user_choice:
@@ -79,8 +79,12 @@ while user_choice != '5':
             clear_screen()
             play_blackjack()
         case '2':
-            print("You are viewing the score history.")
+            print("You are viewing the instructions.")
         case '3':
+            print("You are viewing the house rules.")
+        case '4':
+            print("You are viewing the score history.")
+        case '5':
             break
         case _:
             print("Invalid input")
