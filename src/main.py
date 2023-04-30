@@ -32,6 +32,20 @@ def play_blackjack():
     # Determines winner and displays outcome of the game
     winner = determine_winner()
     print(winner)
+    while True:
+        play = input("Do you want to continue playing a game of Blackjack? Type 'yes' to continue or 'no' to go back to main menu: ").lower()
+        
+        match play:
+            case 'yes':
+                player_hand.clear()
+                dealer_hand.clear()
+                clear_screen()
+                play_blackjack()
+            case 'no':
+                clear_screen()
+                break
+            case _:
+                print("Invalid input, please enter 'yes' or 'no'.")
 
 # TODO 2: Initialise the deck
 init_deck()
