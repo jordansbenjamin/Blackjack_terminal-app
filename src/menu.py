@@ -11,7 +11,4 @@ def menu():
     choice = input("Choose an option from the menu: ")
     return choice
 
-
-
-
 # TODO 4: Create a function that stores the house rules of the game

@@ -20,3 +20,4 @@ def instructions():
     match back:
         case 'b':
             clear_screen()
+            return

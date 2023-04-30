@@ -67,6 +67,7 @@ init_deck()
 #         print("Invalid input, please enter 'yes' or 'no'.")
 
 def main_menu():
+    print(logo)
     # TODO NEW 1: Create an empty string for user choice variable
     user_choice = ''
     # TODO NEW 2: Create a while loop for the menu
@@ -83,13 +84,12 @@ def main_menu():
             case '2':
                 print("You are viewing the instructions.")
                 instructions()
-                main_menu()
             case '3':
                 print("You are viewing the house rules.")
             case '4':
                 print("You are viewing the score history.")
             case '5':
-                return
+                break
             case _:
                 print("Invalid input")
     
