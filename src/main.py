@@ -36,16 +36,20 @@ def play_blackjack():
 init_deck()
 
 # TODO 3: Create a while loop that will prompt the user if they want to continue playing, if yes then call the main function to start the game
-while True:
-    play = input("Do you want to play a game of Blackjack? Type 'yes' or 'no': ").lower()
+# while True:
+#     play = input("Do you want to play a game of Blackjack? Type 'yes' or 'no': ").lower()
     
-    if play == 'yes':
-        # TODO LATER: Add clear function here
-        player_hand.clear()
-        dealer_hand.clear()
-        clear_screen()
-        play_blackjack()
-    elif play == 'no':
-        break
-    else:
-        print("Invalid input, please enter 'yes' or 'no'.")
+#     if play == 'yes':
+#         # TODO LATER: Add clear function here
+#         player_hand.clear()
+#         dealer_hand.clear()
+#         clear_screen()
+#         play_blackjack()
+#     elif play == 'no':
+#         break
+#     else:
+#         print("Invalid input, please enter 'yes' or 'no'.")
+
+# TODO NEW 1: Create an empty string for user choice variable
+# TODO NEW 2: Create a while loop for the menu
+    # TODO NEW 3: Add match case to check user choices
