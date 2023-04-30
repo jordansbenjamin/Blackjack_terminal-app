@@ -69,6 +69,7 @@ init_deck()
 user_choice = ''
 # TODO NEW 2: Create a while loop for the menu
 while user_choice != '5':
+    
     user_choice = main_menu()
     # TODO NEW 3: Add match case to check user choices
     match user_choice:
