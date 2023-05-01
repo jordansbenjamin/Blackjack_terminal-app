@@ -12,15 +12,12 @@ def calculate_score(player_or_dealer_hand):
     for card in cards:
         score += cards_dict[card]
     # TODO 4: If Ace card/s are found and score is over 21, count Ace as 1 instead of 11
-    # aces = cards.count('A')
-    # for i in range(aces):
-    #     if score > 21:
-    #         score -= 10
-    #     else:
-    #         break
-    for i, ace in enumerate(cards):
-        if ace == 'A':
+    aces = cards.count('A')
+    for i in range(aces):
+        if score > 21 and i == 1:
             score -= 10
+        elif score > 21 and i > 1:
+            score -= 1
         else:
             break
     return score

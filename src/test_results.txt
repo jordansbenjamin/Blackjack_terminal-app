@@ -1,8 +1,8 @@
-CALCULATE SCORE TESTS
+CALCULATE SCORE FUNCTION TESTS
 
 TEST 1
 
-FIRST TEST IS A PASS ✅
+RESULT: PASS ✅
 
 NOTE: This test was conducted as a trial test to make sure pytest is working its magic correctly, turns out I had to use the command (pytest -s) as it gave me this error (ERROR test_blackjack.py - OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.)
 
@@ -18,6 +18,8 @@ test_blackjack.py .
 ============================================================= 1 passed in 4.76s ==============================================================
 
 TEST 1 BUG FOUND
+
+RESULT: FAIL ❌
 
 NOTE: Found a bug and ran tests with updated test case and the test failed, trying to find a solution for it now.
 
@@ -41,9 +43,29 @@ test_blackjack.py:44: AssertionError
 FAILED test_blackjack.py::test_calculate_score - AssertionError: assert 11 == 21
 ======================================================== 1 failed, 1 passed in 6.59s =========================================================
 
+TEST 1 BUG FIXED
+
+RESULT: Pass ✅
+
+NOTE: Thanks to this test I was able to fix the bug and ran the tests again to get a pass!
+
+============================================================ test session starts =============================================================
+platform darwin -- Python 3.11.2, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+plugins: mock-3.10.0
+collecting ... 
+
+collected 2 items                                                                                                                            
+
+test_blackjack.py ..
+
+============================================================= 2 passed in 5.26s ==============================================================
+
+DETERMINE WINNER FUNCTION TESTS
+
 TEST 2
 
-SECOND TEST IS A PASS ✅
+RESULT: PASS ✅
 
 ============================================================ test session starts =============================================================
 platform darwin -- Python 3.11.2, pytest-7.3.1, pluggy-1.0.0
