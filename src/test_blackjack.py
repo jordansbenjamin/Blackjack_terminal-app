@@ -44,6 +44,14 @@ def test_calculate_score():
     assert calculate_score(dealer_hand) == expected_dealer_score
     # Result: Pass ✅
 
+    # TEST CASE 3: Test player with a hand of six cards and test the return of the sum
+    player_hand = ['♣4', '♥2', '♦A', '♠4']
+    # Expected score
+    expected_player_score = 20
+    # Expected Result: Pass
+    assert calculate_score(player_hand) == expected_player_score
+    # Result: Failed
+
 ### TEST 2 ###
 # DETERMINE WINNER FUNCTION TEST SUITE
 """This test will assert the correct expected outcome of various winning conditions of the game for both the player and dealer based on the score they have and returns the outcome (win/lose)"""

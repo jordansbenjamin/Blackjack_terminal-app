@@ -17,6 +17,30 @@ test_blackjack.py .
 
 ============================================================= 1 passed in 4.76s ==============================================================
 
+TEST 1 BUG FOUND
+
+NOTE: Found a bug and ran tests with updated test case and the test failed, trying to find a solution for it now.
+
+============================================================ test session starts =============================================================
+platform darwin -- Python 3.11.2, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+plugins: mock-3.10.0
+collecting ... 
+                                                                                                                    
+test_blackjack.py F.
+
+================================================================== FAILURES ==================================================================
+____________________________________________________________ test_calculate_score ____________________________________________________________
+
+>       assert calculate_score(dealer_hand) == expected_dealer_score
+E       AssertionError: assert 11 == 21
+E        +  where 11 = calculate_score(['♥A', '♦K'])
+
+test_blackjack.py:44: AssertionError
+========================================================== short test summary info ===========================================================
+FAILED test_blackjack.py::test_calculate_score - AssertionError: assert 11 == 21
+======================================================== 1 failed, 1 passed in 6.59s =========================================================
+
 TEST 2
 
 SECOND TEST IS A PASS ✅
