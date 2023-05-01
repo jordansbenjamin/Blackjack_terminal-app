@@ -13,7 +13,7 @@ def play_blackjack():
 
     print(main_logo)
 
-    # Both player and dealer initially gets dealt 2 cards
+    # Player initially gets dealt 2 cards, dealer gets dealt 1 only because first card is revealed
     deal_card(2, player_hand)
     deal_card(1, dealer_hand)
 
@@ -23,7 +23,6 @@ def play_blackjack():
     # Dealers score is added, however only their first card is revealed
     dealer_score = calculate_score(dealer_hand)
     print(f"Dealers first card: {dealer_hand}, current score: {dealer_score}")
-    # NOTE: THE ABOVE CODE IS DRY?
 
     # Start of players turn
     player_turn()
