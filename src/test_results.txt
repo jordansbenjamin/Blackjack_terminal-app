@@ -1,6 +1,8 @@
 CALCULATE SCORE TESTS
 
-FIRST TEST IS A PASS
+TEST 1
+
+FIRST TEST IS A PASS ✅
 
 NOTE: This test was conducted as a trial test to make sure pytest is working its magic correctly, turns out I had to use the command (pytest -s) as it gave me this error (ERROR test_blackjack.py - OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.)
 
@@ -13,4 +15,4 @@ collected 1 item
 
 test_blackjack.py .
 
-============================================================= 1 passed in 10.47s =============================================================
+============================================================= 1 passed in 4.76s ==============================================================
