@@ -16,3 +16,19 @@ collected 1 item
 test_blackjack.py .
 
 ============================================================= 1 passed in 4.76s ==============================================================
+
+TEST 2
+
+SECOND TEST IS A PASS ✅
+
+============================================================ test session starts =============================================================
+platform darwin -- Python 3.11.2, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+plugins: mock-3.10.0
+collecting ... 
+
+collected 2 items                                                                                                                            
+
+test_blackjack.py ..
+
+============================================================= 2 passed in 8.13s ==============================================================
