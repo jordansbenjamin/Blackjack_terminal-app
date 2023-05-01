@@ -8,9 +8,9 @@ from cards import init_deck, deal_card
 from winner import determine_winner
 from menu import menu, instructions, rules
 
-# TODO 1: Create a function that will serve as the main function body of the program that will include other parts, sections and functions of the program, this main function will serve as the main flow running the program
 def play_blackjack():
-    # TODO LATE: Add game logo here
+    '''This functions serves as the main function body of the program that includes other parts, section and functions of the program. All combined together to serves as the main flow which runs to play the Blackjack program'''
+
     print(main_logo)
 
     # Both player and dealer initially gets dealt 2 cards
@@ -48,34 +48,18 @@ def play_blackjack():
             case _:
                 print("Invalid input, please enter 'yes' or 'no'.")
 
-# TODO 2: Initialise the deck
+# Initialises the deck of cards at the start of every game for a fresh start
 init_deck()
 
-# TODO 3: Create a while loop that will prompt the user if they want to continue playing, if yes then call the main function to start the game
-# while True:
-#     play = input("Do you want to play a game of Blackjack? Type 'yes' or 'no': ").lower()
-    
-#     if play == 'yes':
-#         # TODO LATER: Add clear function here
-#         player_hand.clear()
-#         dealer_hand.clear()
-#         clear_screen()
-#         play_blackjack()
-#     elif play == 'no':
-#         break
-#     else:
-#         print("Invalid input, please enter 'yes' or 'no'.")
-
 def main_menu():
-    # TODO NEW 1: Create an empty string for user choice variable
+    '''This function serves as the main menu which introduces the user to the program and so the user can interact and navigate throughout the program'''
     user_choice = ''
-    # TODO NEW 2: Create a while loop for the menu
     while user_choice != '5':
         print(main_logo)
         print("Welcome to Blackjack ♠️ Please choose from the following options:")
-        # print("\n")
+        
         user_choice = menu()
-        # TODO NEW 3: Add match case to check user choices
+
         match user_choice:
             case '1':
                 player_hand.clear()
@@ -92,7 +76,6 @@ def main_menu():
                 break
             case _:
                 print("Invalid input")
-    
-    # input("Press ENTER to continue")
 
+# The main menu appears first to introduce the user to the program
 main_menu()
