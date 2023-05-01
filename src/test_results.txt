@@ -45,7 +45,7 @@ FAILED test_blackjack.py::test_calculate_score - AssertionError: assert 11 == 21
 
 TEST 1 BUG FIXED
 
-RESULT: Pass ✅
+RESULT: PASS ✅
 
 NOTE: Thanks to this test I was able to fix the bug and ran the tests again to get a pass!
 

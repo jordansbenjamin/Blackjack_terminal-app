@@ -13,6 +13,8 @@ def menu():
     choice = input("Choose an option from the menu: ")
     return choice
 
+# TODO NEW: Create a back to menu function to make code DRY?
+
 # TODO 3: Create a function that stores information of the games instructions
 def instructions():
     clear_screen()
