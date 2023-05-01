@@ -9,7 +9,7 @@ from winner import *
 # NOTE: Running tests works with the command(pytest -s)
 
 ### TEST 1 ###
-# CALCULATE SCORE FUNCTION 
+# CALCULATE SCORE FUNCTION TEST SUITE
 """This test will assert if the function for calculating the score from the list of cards adds up correctly and returns the correct sum"""
 def test_calculate_score():
     # TEST CASE 1: Test player with a hand of two cards and test the return of the sum
@@ -45,7 +45,7 @@ def test_calculate_score():
     # Result: Pass ✅
 
 ### TEST 2 ###
-# DETERMINE WINNER FUNCTION
+# DETERMINE WINNER FUNCTION TEST SUITE
 """This test will assert the correct expected outcome of various winning conditions of the game for both the player and dealer based on the score they have and returns the outcome (win/lose)"""
 def test_determine_winner():
     # TEST CASE 1: Test the condition when the player recieves a natural Blackjack and returns the correct output
@@ -109,7 +109,7 @@ def test_determine_winner():
     elif player_hand == ['♥7', '♦5', '♠4'] and dealer_hand == ['♦2', '♠5', '♦6']:
         expected_output = "You're a winner! You have a higher score than the Dealer 🥳"
         # Expected Result: Pass
-        assert determine_winner() == expected_output
+        assert determine_winner(player_hand, dealer_hand) == expected_output
 
     # TEST CASE 8: Test the condition when the dealers hand is higher than the players hand and returns the correct output
     # Dealers hand sums up to 18
@@ -118,7 +118,7 @@ def test_determine_winner():
     elif dealer_hand == ['♥8', '♠3', '♣10'] and player_hand == ['♦4', '♠9', '♥2' ]:
         expected_output = "You lost... The dealer has a higher score 🙃"
         # Expected Result: Pass
-        assert determine_winner() == expected_output
+        assert determine_winner(player_hand, dealer_hand) == expected_output
 
     # TEST CASE 8: Final condition where both the players and dealers hand total score equals each other and returns the correct output
     # Dealer hand sums up to 19
@@ -127,4 +127,4 @@ def test_determine_winner():
     elif dealer_hand == ['♥3', '♦6', '♣10'] and player_hand == ['♦4', '♠9', '♥6']:
         expected_output = "It's a draw! 🥲"
         # Expected Result: Pass
-        assert determine_winner() == expected_output
+        assert determine_winner(player_hand, dealer_hand) == expected_output
