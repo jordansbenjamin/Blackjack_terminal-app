@@ -41,6 +41,7 @@ def play_blackjack():
                 dealer_hand.clear()
                 clear_screen()
                 play_blackjack()
+                break
             case 'no':
                 clear_screen()
                 break
