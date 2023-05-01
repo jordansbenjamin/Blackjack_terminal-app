@@ -24,7 +24,7 @@ def determine_winner():
     if player_score == 21:
         return "You won with a Blackjack! 😎"
     elif dealer_score == 21:
-        return "You lose! Dealer wins with a Blackjack 🥸"
+        return "You lose! Dealer wins with a Blackjack 😤"
 
     # TODO 5: Determine all other possible winning/losing conditions, return their outcome
     if player_score > 21:
