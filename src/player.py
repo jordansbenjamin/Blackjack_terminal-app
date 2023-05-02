@@ -7,6 +7,7 @@ player_hand = []
 
 def player_turn():
     '''This function involves logic of players turns and play'''
+    
     # Calculates player score from initial dealt cards
     player_score = calculate_score(player_hand)
     # Checks if score is 21, if so players turn automatically ends
