@@ -1,4 +1,5 @@
 ##### MAIN SECTION #####
+import csv
 from clear import clear_screen
 from art import main_logo
 from calculate import calculate_score
@@ -7,7 +8,7 @@ from dealer import dealer_turn, dealer_hand
 from cards import init_deck, deal_card
 from winner import determine_winner
 from menu import menu, instructions, rules
-
+from scores import create_csv_file, count_games_played, view_game_history, game_history
 
 def play_blackjack():
     '''This functions serves as the main function body of the program that includes other parts, section and functions of the program. All combined together to serves as the main flow which runs to play the Blackjack program'''
@@ -34,6 +35,10 @@ def play_blackjack():
     print(winner)
 
     # TODO 1: Write game results to CSV and create a variable that stores the count games function
+    game_num = count_games_played
+    with open(game_history, 'a', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow([f"Game {game_num}", player_hand, dealer_hand, winner])
 
     while True:
         play = input("Do you want to continue playing a game of Blackjack? Type 'yes' to continue or 'no' to go back to main menu: ").lower()
@@ -76,6 +81,7 @@ def main_menu():
             case '4':
                 print("You are viewing the score history.")
                 # TODO 2: Add view history function here
+                view_game_history()
             case '5':
                 break
             case _:
