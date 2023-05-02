@@ -2,7 +2,7 @@
 from calculate import calculate_score
 from cards import deal_card
 
-# Initialise empty player cards list, requires this to be global as it is accessed various times throughout the program
+# Initialise empty player hand list, requires this to be global as it is accessed various times throughout the program
 player_hand = []
 
 def player_turn():

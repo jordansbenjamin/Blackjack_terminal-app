@@ -3,21 +3,24 @@ from calculate import calculate_score
 from cards import draw_card
 from player import player_hand
 
-# TODO 1: Create empty dealer cards list
+# Initialise empty dealer hand list, requires this to be global as it is accessed various times throughout the program
 dealer_hand = []
-# TODO 2: Create dealers function which involves logic of dealers turns and play
+
 def dealer_turn():
+    '''This function involves logic of dealers turns and play'''
+    
+    # The codes below to calculate score is required as it is used for conditional statements to check
     dealer_score = calculate_score(dealer_hand)
     player_score = calculate_score(player_hand)
-    # TODO 3: Dealer doesn't have to draw another card if certain conditions are met: Player bust, dealer score higher, or dealer has BJ
+    # Dealer doesn't have to draw another card if certain conditions are met: Player bust, dealer score higher, or dealer has BJ
     if player_score > 21 or dealer_score > player_score or dealer_score == 21:
         return
-    # TODO 4: If dealers hand score is under 17, keep drawing cards (use while loop)
+    # If dealers hand score is under 17, keep drawing cards
     while dealer_score < 17:
         card = draw_card()
         dealer_hand.append(card)
+        # This code is required as the conditions checks the update hand/score
         dealer_score = calculate_score(dealer_hand)
-
         # Conditions for dealer
         if dealer_score == 21: # If dealer BJ, turn ends
             return
