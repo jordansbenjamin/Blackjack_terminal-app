@@ -35,10 +35,10 @@ def play_blackjack():
     print(winner)
 
     # TODO 1: Write game results to CSV and create a variable that stores the count games function
-    game_num = count_games_played
+    game_num = count_games_played()
     with open(game_history, 'a', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow([f"Game {game_num}", player_hand, dealer_hand, winner])
+        writer.writerow([f"{game_num}", player_hand, dealer_hand, winner])
 
     while True:
         play = input("Do you want to continue playing a game of Blackjack? Type 'yes' to continue or 'no' to go back to main menu: ").lower()

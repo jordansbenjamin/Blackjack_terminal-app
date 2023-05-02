@@ -18,7 +18,9 @@ def count_games_played():
             return sum(1 for row in reader)
     except FileNotFoundError:
         return 1
-    
+
+# TODO 4: Create a function that writes the games history to CSV instead of writing it on the play Blackjack function
+
 # TODO 3: Create a function that allows the user to read game history from CSV
 def view_game_history():
     try:
