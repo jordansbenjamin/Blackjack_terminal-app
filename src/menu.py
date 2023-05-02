@@ -1,6 +1,7 @@
 ##### MENU SECTION #####
 from clear import clear_screen
-from art import instruction_logo, rules_logo
+from art import instruction_logo, rules_logo, history_logo
+from history import view_game_history
 
 # TODO 1: Create menu function displaying all the list of menu items to select from
 def menu():
@@ -52,6 +53,18 @@ def rules():
     Cards are removed from the deck as they are drawn.
     The dealer is the computer.
     """)
+
+    back = input("Press 'b' to go back to the Main Menu: ")
+
+    match back:
+        case 'b':
+            clear_screen()
+            return
+        
+def history():
+    clear_screen()
+    print(history_logo)
+    view_game_history()
 
     back = input("Press 'b' to go back to the Main Menu: ")
 

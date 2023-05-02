@@ -7,7 +7,7 @@ from player import player_turn, player_hand
 from dealer import dealer_turn, dealer_hand
 from cards import init_deck, deal_card
 from winner import determine_winner
-from menu import menu, instructions, rules
+from menu import menu, instructions, rules, history
 from history import create_csv_file, view_game_history, write_game_history
 
 def play_blackjack():
@@ -76,9 +76,10 @@ def main_menu():
             case '3':
                 rules()
             case '4':
-                print("You are viewing the score history.")
+                # print("You are viewing the score history.")
                 # TODO 2: Add view history function here
-                view_game_history()
+                # view_game_history()
+                history()
             case '5':
                 break
             case _:

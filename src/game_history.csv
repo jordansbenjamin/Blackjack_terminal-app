@@ -1,1 +1,3 @@
 Game,Player Hand,Dealer Hand,Result
+1,"['♦7', '♠5', '♦K']",['♠6'],You went over! And that's game over.. 😩
+2,"['♣K', '♦5', '♠A']",['♣8'],You went over! And that's game over.. 😩
