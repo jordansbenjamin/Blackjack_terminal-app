@@ -1,5 +1,4 @@
 ##### MAIN SECTION #####
-import csv
 from clear import clear_screen
 from art import main_logo, thanks_logo
 from calculate import calculate_score
@@ -35,17 +34,17 @@ def play_blackjack():
         play = input("Continue playing a game of Blackjack? Type 'y' to continue or 'b' to go back to main menu: ").lower()
         
         match play:
-            case 'yes':
+            case 'y':
                 # Recursively starts the game for another round
                 clean_slate()
                 play_blackjack()
                 break
-            case 'no':
+            case 'b':
                 # Exits loop and function to go back to main menu
                 clear_screen()
                 break
             case _:
-                print("Invalid input, please enter 'yes' or 'no'.")
+                print("Invalid input, please enter 'y' or 'b'.")
 
 def main_menu():
     '''This function serves as the main menu which introduces the user to the program and so the user can interact and navigate throughout the program'''
