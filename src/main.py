@@ -35,10 +35,6 @@ def play_blackjack():
     print(winner)
 
     # TODO 1: Write game results to CSV and create a variable that stores the count games function
-    # game_num = count_games_played()
-    # with open(game_history, 'a', newline='') as file:
-    #     writer = csv.writer(file)
-    #     writer.writerow([f"{game_num}", player_hand, dealer_hand, winner])
     write_game_history(player_hand, dealer_hand, winner)
 
     while True:
