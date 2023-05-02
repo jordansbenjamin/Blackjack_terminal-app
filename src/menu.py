@@ -65,7 +65,7 @@ def history():
     clear_screen()
     print(history_logo)
     view_game_history()
-
+    print("\n")
     back = input("Press 'b' to go back to the Main Menu: ")
 
     match back:
