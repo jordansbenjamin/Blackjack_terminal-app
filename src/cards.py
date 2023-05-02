@@ -1,7 +1,7 @@
 #### CARDS SECTION ####
 import numpy as np
 
-# TODO 1: Create dictionary of cards
+# Initialises dictionary of cards
 cards_dict = {
     'A': 11,
     '2': 2,
@@ -17,29 +17,29 @@ cards_dict = {
     'K': 10,
 }
 
-# TODO 2: Create list of suits
+# Initialises list of suits
 suits = ['♦', '♥', '♠', '♣']
 
-# TODO 3: Create empty deck list
+# Initialises empty deck list
 deck = []
 
-# TODO 4: Create a function that initialises deck of cards that adds each card to its own respective suits which adds up to a total of 52 deck of cards, additionally shuffle the deck of cards
 def init_deck():
+    '''This function initialises deck of cards which adds each card to its own respective suits adding up to a total of 52 deck of cards, additionally shuffle the deck of cards'''
     for card in cards_dict:
         for suit in suits:
             cards = suit + card
             deck.append(cards)
     np.random.shuffle(deck)
 
-# TODO 5: Create a function that draws a card from the deck, check condition if deck of cards is empty then initialise the deck, otherwise pop the card from the deck and return that card
 def draw_card():
+    '''This function draws a card from the deck, checks condition if deck of cards is empty then initialise the deck, otherwise pop the card from the deck and return that card'''
     if len(deck) == 0:
         init_deck()
     card = deck.pop(0)
     return card
 
-# TODO 6: Create a function that adds drawn card for both player and dealer
 def deal_card(n, hand):
+    '''This function adds drawn card for both player and dealer'''
     for i in range(n):
         card = draw_card()
         hand.append(card)
