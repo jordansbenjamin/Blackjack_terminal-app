@@ -57,7 +57,7 @@ def play_blackjack():
                 print("Invalid input, please enter 'yes' or 'no'.")
 
 # Initialises the deck of cards at the start of every game for a fresh start
-init_deck()
+# init_deck()
 
 def main_menu():
     '''This function serves as the main menu which introduces the user to the program and so the user can interact and navigate throughout the program'''
@@ -88,4 +88,9 @@ def main_menu():
                 print("Invalid input")
 
 # The main menu appears first to introduce the user to the program
-main_menu()
+# main_menu()
+
+if __name__ == '__main__':
+    create_csv_file()
+    init_deck()
+    main_menu()
