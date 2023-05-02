@@ -5,6 +5,7 @@ from dealer import dealer_hand
 
 def determine_winner():
     '''This function involves the logic for determining conditions of winner and displaying the final score and outcome'''
+    
     # Sum up final player and dealer score
     player_score = calculate_score(player_hand)
     dealer_score = calculate_score(dealer_hand)
