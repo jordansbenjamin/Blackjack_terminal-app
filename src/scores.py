@@ -18,3 +18,5 @@ def count_games_played():
             return sum(1 for row in reader)
     except FileNotFoundError:
         return 1
+    
+# TODO 3: Create a function that allows the user to read game history from CSV

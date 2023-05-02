@@ -8,6 +8,7 @@ from cards import init_deck, deal_card
 from winner import determine_winner
 from menu import menu, instructions, rules
 
+
 def play_blackjack():
     '''This functions serves as the main function body of the program that includes other parts, section and functions of the program. All combined together to serves as the main flow which runs to play the Blackjack program'''
 
@@ -31,6 +32,9 @@ def play_blackjack():
     # Determines winner and displays outcome of the game
     winner = determine_winner()
     print(winner)
+
+    # TODO 1: Write game results to CSV and create a variable that stores the count games function
+
     while True:
         play = input("Do you want to continue playing a game of Blackjack? Type 'yes' to continue or 'no' to go back to main menu: ").lower()
         
@@ -71,6 +75,7 @@ def main_menu():
                 rules()
             case '4':
                 print("You are viewing the score history.")
+                # TODO 2: Add view history function here
             case '5':
                 break
             case _:
