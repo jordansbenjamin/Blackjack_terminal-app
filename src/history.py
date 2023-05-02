@@ -15,6 +15,7 @@ def create_csv_file():
 
 # TODO 2: Create a function that counts the amount of games played and records that into the CSV
 def count_games_played():
+    '''This function will count the total number of games played by checking the number of rows written in the CSV file'''
     try:
         with open(game_history, 'r') as file:
             reader = csv.reader(file)
@@ -24,6 +25,7 @@ def count_games_played():
 
 # TODO 4: Create a function that writes the games history to CSV instead of writing it on the play Blackjack function
 def write_game_history(player_hand, dealer_hand, winner):
+    '''This function will write and record the outcome and history of each game played to the CSV file'''
     game_num = count_games_played()
     with open(game_history, 'a', newline='') as file:
         writer = csv.writer(file)
@@ -31,6 +33,7 @@ def write_game_history(player_hand, dealer_hand, winner):
 
 # TODO 3: Create a function that allows the user to read game history from CSV
 def view_game_history():
+    '''This function will allow the user to view the game history which is recorded and written in the CSV, it also implements prettytable for a better viewing experience'''
     try:
         with open(game_history, 'r') as file:
             reader = csv.reader(file)

@@ -8,7 +8,7 @@ from dealer import dealer_turn, dealer_hand
 from cards import init_deck, deal_card
 from winner import determine_winner
 from menu import menu, instructions, rules
-from scores import create_csv_file, count_games_played, view_game_history, write_game_history, game_history
+from history import create_csv_file, view_game_history, write_game_history
 
 def play_blackjack():
     '''This functions serves as the main function body of the program that includes other parts, section and functions of the program. All combined together to serves as the main flow which runs to play the Blackjack program'''
