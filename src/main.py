@@ -5,41 +5,18 @@ from art import main_logo, thanks_logo
 from calculate import calculate_score
 from player import player_turn, player_hand
 from dealer import dealer_turn, dealer_hand
-from cards import init_deck, deal_card
+from cards import init_deck
 from winner import determine_winner
 from menu import menu, instructions, rules, history
 from history import create_csv_file, view_game_history, write_game_history
-
-def init_deal():
-    deal_card(2, player_hand)
-    deal_card(1, dealer_hand)
-
-def print_first_hand_and_score():
-    # Players score is added and their first hand is revealed
-    player_score = calculate_score(player_hand)
-    print(f"Your first hand: {player_hand}, current score: {player_score}")
-    # Dealers score is added, however only their first card is revealed
-    dealer_score = calculate_score(dealer_hand)
-    print(f"Dealers first card: {dealer_hand}, current score: {dealer_score}")
+from abstractions import init_deal, print_first_hand_and_score
 
 def play_blackjack():
     '''This functions serves as the main function body of the program that includes other parts, section and functions of the program. All combined together to serves as the main flow which runs to play the Blackjack program'''
 
     print(main_logo)
-
-    # Player initially gets dealt 2 cards, dealer gets dealt 1 only because first card is revealed
-    # deal_card(2, player_hand)
-    # deal_card(1, dealer_hand)
-
     init_deal()
-
-    # # Players score is added and their first hand is revealed
-    # player_score = calculate_score(player_hand)
-    # print(f"Your first hand: {player_hand}, current score: {player_score}")
-    # # Dealers score is added, however only their first card is revealed
-    # dealer_score = calculate_score(dealer_hand)
-    # print(f"Dealers first card: {dealer_hand}, current score: {dealer_score}")
-
+    # Prints first hand of player and dealer along with their score
     print_first_hand_and_score()
 
     # Start of players turn
