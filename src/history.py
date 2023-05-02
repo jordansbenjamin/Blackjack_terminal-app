@@ -1,4 +1,4 @@
-##### CSV SECTION #####
+##### GAME HISTORY CSV SECTION #####
 import csv
 import os
 from prettytable import PrettyTable
@@ -11,7 +11,7 @@ def create_csv_file():
     if not os.path.isfile(game_history):
         with open(game_history, 'a', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Game', 'Player Hand', 'Dealer Hand', 'Result'])
+            writer.writerow(['Game', 'Player Hand', 'Player Score', 'Dealer Hand', 'Dealer Score', 'Result'])
 
 # TODO 2: Create a function that counts the amount of games played and records that into the CSV
 def count_games_played():
@@ -24,12 +24,12 @@ def count_games_played():
         return 1
 
 # TODO 4: Create a function that writes the games history to CSV instead of writing it on the play Blackjack function
-def write_game_history(player_hand, dealer_hand, winner):
+def write_game_history(player_hand, player_score ,dealer_hand, dealer_score ,winner):
     '''This function will write and record the outcome and history of each game played to the CSV file'''
     game_num = count_games_played()
     with open(game_history, 'a', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow([game_num, player_hand, dealer_hand, winner])
+        writer.writerow([game_num, player_hand, player_score, dealer_hand, dealer_score, winner])
 
 # TODO 3: Create a function that allows the user to read game history from CSV
 def view_game_history():

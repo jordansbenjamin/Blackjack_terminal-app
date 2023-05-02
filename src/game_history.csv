@@ -1,3 +1,5 @@
-Game,Player Hand,Dealer Hand,Result
-1,"['♦7', '♠5', '♦K']",['♠6'],You went over! And that's game over.. 😩
-2,"['♣K', '♦5', '♠A']",['♣8'],You went over! And that's game over.. 😩
+Game,Player Hand,Player Score,Dealer Hand,Dealer Score,Result
+1,"['♠A', '♦10']",21,"['♣3', '♣Q', '♠3', '♦6']",3,Instant win! With a natural Blackjack 🤠
+2,"['♥J', '♠Q']",20,"['♠2', '♥Q', '♠10']",2,"Dealer went over.. Lucky you, you win! 😅"
+3,"['♦2', '♥4', '♠8', '♥5']",6,"['♣6', '♠5', '♦Q']",6,You lose! Dealer wins with a Blackjack 😤
+4,"['♠2', '♠5', '♠3', '♥Q']",7,"['♣A', '♠4', '♠7']",11,"Dealer went over.. Lucky you, you win! 😅"

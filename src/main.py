@@ -1,7 +1,7 @@
 ##### MAIN SECTION #####
 import csv
 from clear import clear_screen
-from art import main_logo
+from art import main_logo, thanks_logo
 from calculate import calculate_score
 from player import player_turn, player_hand
 from dealer import dealer_turn, dealer_hand
@@ -35,7 +35,7 @@ def play_blackjack():
     print(winner)
 
     # TODO 1: Write game results to CSV and create a variable that stores the count games function
-    write_game_history(player_hand, dealer_hand, winner)
+    write_game_history(player_hand, player_score, dealer_hand, dealer_score, winner)
 
     while True:
         play = input("Do you want to continue playing a game of Blackjack? Type 'yes' to continue or 'no' to go back to main menu: ").lower()
@@ -81,6 +81,8 @@ def main_menu():
                 # view_game_history()
                 history()
             case '5':
+                clear_screen()
+                print(thanks_logo)
                 break
             case _:
                 print("Invalid input")
