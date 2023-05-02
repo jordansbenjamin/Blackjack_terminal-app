@@ -3,24 +3,35 @@ from clear import clear_screen
 from art import instruction_logo, rules_logo, history_logo
 from history import view_game_history
 
-# TODO 1: Create menu function displaying all the list of menu items to select from
 def menu():
+    '''The menu function displays all the list of menu items for the user to select from'''
+
     print("1. Enter 1 to start playing Blackjack")
     print("2. Enter 2 to view instructions")
     print("3. Enter 3 to view house rules")
     print("4. Enter 4 to check your score history")
     print("5. Enter 5 to exit Blackjack")
-    # TODO 2: Prompt user for their selection and return selection
+
+    # Prompt user for their selection and return selection
     choice = input("Choose an option from the menu: ")
     return choice
 
-# TODO NEW: Create a back to menu function to make code DRY?
+def back_to_menu():
+    '''A function that allows the user to navigate back to the main menu'''
 
-# TODO 3: Create a function that stores information of the games instructions
+    back = input("Press 'b' to go back to the Main Menu: ")
+
+    match back:
+        case 'b':
+            clear_screen()
+            return
+
 def instructions():
+    '''This function allows the user to view the instructions for the game'''
+
     clear_screen()
     print(instruction_logo)
-    # print("\n")
+    
     print("""
     The premise of the game is simple, get as close to 21 as possible without going over.
     As the player you will be dealt 2 cards, the dealer will also have 2 cards.
@@ -31,17 +42,12 @@ def instructions():
     The game will end if either the players or dealers final hand score is over 21.
     The game will end if either player or dealers final hand score is less than each others.
     """)
-    # print("\n")
 
-    back = input("Press 'b' to go back to the Main Menu: ")
+    back_to_menu()
 
-    match back:
-        case 'b':
-            clear_screen()
-            return
-
-# TODO 4: Create a function that stores the house rules of the game
 def rules():
+    '''This functions allows the user to view the house rules of the game'''
+
     clear_screen()
     print(rules_logo)
     print("""
@@ -54,21 +60,13 @@ def rules():
     The dealer is the computer.
     """)
 
-    back = input("Press 'b' to go back to the Main Menu: ")
-
-    match back:
-        case 'b':
-            clear_screen()
-            return
+    back_to_menu()
         
 def history():
+    '''This functions allows the user to view the history and score of games played, called from view_game_history() function'''
+    
     clear_screen()
     print(history_logo)
     view_game_history()
     print("\n")
-    back = input("Press 'b' to go back to the Main Menu: ")
-
-    match back:
-        case 'b':
-            clear_screen()
-            return
+    back_to_menu()
