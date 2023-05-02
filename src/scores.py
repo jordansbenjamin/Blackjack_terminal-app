@@ -1,5 +1,6 @@
 ##### CSV SECTION #####
 import csv
+from prettytable import PrettyTable
 
 game_history = 'game_history.csv'
 
