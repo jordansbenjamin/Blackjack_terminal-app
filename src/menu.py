@@ -1,7 +1,7 @@
 ##### MENU SECTION #####
 from clear import clear_screen
 from art import instruction_logo, rules_logo, history_logo
-from history import view_game_history
+from history import view_game_history, wipe_game_history
 
 def menu():
     '''The menu function displays all the list of menu items for the user to select from'''
@@ -9,8 +9,9 @@ def menu():
     print("1. Enter 1 to start playing Blackjack")
     print("2. Enter 2 to view instructions")
     print("3. Enter 3 to view house rules")
-    print("4. Enter 4 to check your score history")
-    print("5. Enter 5 to exit Blackjack")
+    print("4. Enter 4 to check your game history")
+    print("5. Enter 5 to wipe game history")
+    print("6. Enter 6 to exit Blackjack")
 
     # Prompt user for their selection and return selection
     choice = input("Choose an option from the menu: ")
@@ -70,3 +71,13 @@ def history():
     view_game_history()
     print("\n")
     back_to_menu()
+
+def wipe_history():
+    '''This function allows the user to decide to wipe and delete the game history'''
+
+    clear_screen()
+    # Print wipe logo here
+    wipe_game_history()
+    print("\n")
+    # back_to_menu()
+    

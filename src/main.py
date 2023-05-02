@@ -6,7 +6,7 @@ from player import player_turn, player_hand
 from dealer import dealer_turn, dealer_hand
 from cards import init_deck
 from winner import determine_winner
-from menu import menu, instructions, rules, history
+from menu import menu, instructions, rules, history, wipe_history
 from history import create_csv_file, view_game_history, write_game_history
 from abstractions import init_deal, print_first_hand_and_score, clean_slate
 
@@ -73,6 +73,9 @@ def main_menu():
                 # This will get you to view the history and score for the game, leaving the menu
                 history()
             case '5':
+                # This will get you to view the history and score for the game, leaving the menu
+                wipe_history()
+            case '6':
                 # Exits the program entirely
                 clear_screen()
                 print(thanks_logo)
