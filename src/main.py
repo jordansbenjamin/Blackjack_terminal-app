@@ -10,15 +10,11 @@ from winner import determine_winner
 from menu import menu, instructions, rules, history
 from history import create_csv_file, view_game_history, write_game_history
 
-def play_blackjack():
-    '''This functions serves as the main function body of the program that includes other parts, section and functions of the program. All combined together to serves as the main flow which runs to play the Blackjack program'''
-
-    print(main_logo)
-
-    # Player initially gets dealt 2 cards, dealer gets dealt 1 only because first card is revealed
+def init_deal():
     deal_card(2, player_hand)
     deal_card(1, dealer_hand)
 
+def print_first_hand_and_score():
     # Players score is added and their first hand is revealed
     player_score = calculate_score(player_hand)
     print(f"Your first hand: {player_hand}, current score: {player_score}")
@@ -26,14 +22,36 @@ def play_blackjack():
     dealer_score = calculate_score(dealer_hand)
     print(f"Dealers first card: {dealer_hand}, current score: {dealer_score}")
 
+def play_blackjack():
+    '''This functions serves as the main function body of the program that includes other parts, section and functions of the program. All combined together to serves as the main flow which runs to play the Blackjack program'''
+
+    print(main_logo)
+
+    # Player initially gets dealt 2 cards, dealer gets dealt 1 only because first card is revealed
+    # deal_card(2, player_hand)
+    # deal_card(1, dealer_hand)
+
+    init_deal()
+
+    # # Players score is added and their first hand is revealed
+    # player_score = calculate_score(player_hand)
+    # print(f"Your first hand: {player_hand}, current score: {player_score}")
+    # # Dealers score is added, however only their first card is revealed
+    # dealer_score = calculate_score(dealer_hand)
+    # print(f"Dealers first card: {dealer_hand}, current score: {dealer_score}")
+
+    print_first_hand_and_score()
+
     # Start of players turn
     player_turn()
     # Start of dealers turn
     dealer_turn()
     # Determines winner and displays outcome of the game
     winner = determine_winner()
-    print(winner)
-
+    # print(winner)
+    # Calculates score for final hand, cannot be abstracted as variable needs to be accessed as it is used as arguments
+    player_score = calculate_score(player_hand)
+    dealer_score = calculate_score(dealer_hand)
     # TODO 1: Write game results to CSV and create a variable that stores the count games function
     write_game_history(player_hand, player_score, dealer_hand, dealer_score, winner)
 
@@ -58,6 +76,7 @@ def play_blackjack():
 
 def main_menu():
     '''This function serves as the main menu which introduces the user to the program and so the user can interact and navigate throughout the program'''
+    clear_screen()
     user_choice = ''
     while user_choice != '5':
         print(main_logo)

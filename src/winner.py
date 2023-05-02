@@ -35,4 +35,5 @@ def determine_winner():
     else:
         result = "It's a draw! 🥲"
     
+    print(result)
     return result
