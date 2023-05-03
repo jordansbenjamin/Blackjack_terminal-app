@@ -31,7 +31,7 @@ def play_blackjack():
     write_game_history(player_hand, player_score, dealer_hand, dealer_score, winner)
 
     while True:
-        play = input("Continue playing a game of Blackjack? Type 'y' to continue or 'b' to go back to main menu: ").lower()
+        play = input("Continue playing a game of Blackjack? Type 'y' to continue or 'b' to go back to main menu: ").lower().strip(' ')
         
         match play:
             case 'y':

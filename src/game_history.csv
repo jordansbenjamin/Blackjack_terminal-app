@@ -1,21 +1,10 @@
 Game,Player Hand,Player Score,Dealer Hand,Dealer Score,Result
-1,"['♦6', '♦Q']",16,"['♥K', '♠6', '♠Q']",26,"Dealer went over.. Lucky you, you win! 😅"
-2,"['♣A', '♠K']",21,"['♠J', '♥6', '♠A']",27,Instant win! With a natural Blackjack 🤠
-3,"['♥J', '♥5']",15,"['♦7', '♣2', '♣6', '♠5']",20,You lost... The dealer has a higher score 🙃
-4,"['♦8', '♦4', '♣10']",22,['♠7'],7,You went over! And that's game over.. 😩
-5,"['♦6', '♠K', '♠J']",16,['♥8'],8,You went over! And that's game over.. 😩
-6,"['♣2', '♣5', '♥6', '♣4']",17,"['♣7', '♠7', '♥5']",19,You lost... The dealer has a higher score 🙃
-7,"['♣6', '♥A']",17,"['♦8', '♠10']",18,You lost... The dealer has a higher score 🙃
-8,"['♣K', '♥7']",17,"['♣A', '♦2', '♦3', '♦10']",26,"Dealer went over.. Lucky you, you win! 😅"
-9,"['♣10', '♣7']",17,"['♥2', '♠K', '♥6']",18,You lost... The dealer has a higher score 🙃
-10,"['♠4', '♣2', '♠2', '♥Q']",18,"['♥K', '♥A']",21,You lose! Dealer wins with a natural Blacjack 🤯
-11,"['♥K', '♥5', '♥4']",19,"['♦K', '♥A']",21,You lose! Dealer wins with a natural Blacjack 🤯
-12,"['♦5', '♠7', '♥6']",18,"['♦3', '♦K', '♦10']",23,"Dealer went over.. Lucky you, you win! 😅"
-13,"['♠3', '♠10', '♠7']",20,"['♣K', '♣2', '♠K']",22,"Dealer went over.. Lucky you, you win! 😅"
-14,"['♠A', '♦8']",19,"['♣5', '♥7', '♣K']",22,"Dealer went over.. Lucky you, you win! 😅"
-15,"['♥4', '♠4', '♠2', '♣7']",17,"['♥10', '♥6', '♣Q']",26,"Dealer went over.. Lucky you, you win! 😅"
-16,"['♦A', '♣4']",15,"['♠8', '♥4', '♦3', '♥8']",23,"Dealer went over.. Lucky you, you win! 😅"
-17,"['♠Q', '♣4']",14,"['♠8', '♣3', '♦8']",19,You lost... The dealer has a higher score 🙃
-18,"['♦5', '♣3']",8,"['♣2', '♥8', '♣7']",17,You lost... The dealer has a higher score 🙃
-19,"['♣4', '♠5']",9,"['♠7', '♠6', '♠A']",24,"Dealer went over.. Lucky you, you win! 😅"
-20,"['♠5', '♣6', '♦6']",17,"['♠8', '♦J']",18,You lost... The dealer has a higher score 🙃
+1,"['♣A', '♥3', '♣5']",19,"['♦7', '♣10']",17,You're a winner! You have a higher score than the Dealer 🥳
+2,"['♦J', '♦A']",21,"['♣10', '♠K']",20,Instant win! With a natural Blackjack 🤠
+3,"['♣Q', '♣4', '♣2']",16,"['♥K', '♠10']",20,You lost... The dealer has a higher score 🙃
+4,"['♣J', '♠3', '♥Q']",23,['♣6'],6,You went over! And that's game over.. 😩
+5,"['♣8', '♠5', '♦A']",24,['♠J'],10,You went over! And that's game over.. 😩
+6,"['♦4', '♦6']",10,"['♣7', '♥8', '♣2']",17,You lost... The dealer has a higher score 🙃
+7,"['♠2', '♠4']",6,['♠Q'],10,You lost... The dealer has a higher score 🙃
+8,"['♥5', '♣7', '♠2', '♠5']",19,"['♠7', '♠8', '♣K']",25,"Dealer went over.. Lucky you, you win! 😅"
+9,"['♥7', '♥4', '♥A']",22,['♥8'],8,You went over! And that's game over.. 😩

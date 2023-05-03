@@ -2,6 +2,7 @@
 from calculate import calculate_score
 from player import player_hand
 from dealer import dealer_hand
+from cards import deal_card
 
 def determine_winner():
     '''This function involves the logic for determining conditions of winner and displaying the final score and outcome'''

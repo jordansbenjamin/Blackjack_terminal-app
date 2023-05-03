@@ -15,7 +15,7 @@ def player_turn():
         return
         
     while True: 
-        hit_pass = input("Do you want to hit for another card or pass to skip your turn? Type 'h' or 'p': ")
+        hit_pass = input("Do you want to hit for another card or pass to skip your turn? Type 'h' or 'p': ").lower().strip(' ')
 
         if hit_pass == 'h':
             print("\n")

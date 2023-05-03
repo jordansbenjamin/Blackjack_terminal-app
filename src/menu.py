@@ -14,14 +14,14 @@ def menu():
     print("6. Enter 6 to exit Blackjack")
 
     # Prompt user for their selection and return selection
-    choice = input("Choose an option from the menu: ")
+    choice = input("Choose an option from the menu: ").strip(' ')
     return choice
 
 def back_to_menu():
     '''A function that allows the user to navigate back to the main menu'''
     
     while True:
-        back = input("Press 'b' to go back to the Main Menu: ")
+        back = input("Press 'b' to go back to the Main Menu: ").lower().strip(' ')
         
         match back:
             case 'b':
