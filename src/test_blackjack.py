@@ -138,4 +138,23 @@ def test_determine_winner():
         assert determine_winner(player_hand, dealer_hand) == expected_output
     # Result: Pass ✅
 
+### TEST 3 ###
+def test_menu(monkeypatch, capsys):
+    '''This test assserts users inputs by simulating through the possible inputs and returns the correct expected results'''
+    # Using monkeypatch to simulate user input
+    monkeypatch.setattr('builtins.input', lambda _: '1')
+    # Call the function
+    menu()
+    # Checks the output
+    captured = capsys.readouterr()
+    expected = '1. Enter 1 to start playing Blackjack\n' \
+               '2. Enter 2 to view instructions\n' \
+               '3. Enter 3 to view house rules\n' \
+               '4. Enter 4 to check your game history\n' \
+               '5. Enter 5 to wipe game history\n' \
+               '6. Enter 6 to exit Blackjack\n\n'
+    # Expected result: Pass
+    assert captured.out == expected
+    # Result: Pass ✅
+
 # TODO: Test exceptions if they are raised appropriately

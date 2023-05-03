@@ -1,7 +1,5 @@
-CALCULATE SCORE FUNCTION TESTS
-
 TEST 1
-
+CALCULATE SCORE FUNCTION TESTS
 RESULT: PASS ✅
 
 NOTE: This test was conducted as a trial test to make sure pytest is working its magic correctly, turns out I had to use the command (pytest -s) as it gave me this error (ERROR test_blackjack.py - OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.)
@@ -61,9 +59,9 @@ test_blackjack.py ..
 
 ============================================================= 2 passed in 5.26s ==============================================================
 
-DETERMINE WINNER FUNCTION TESTS
 
 TEST 2
+DETERMINE WINNER FUNCTION TESTS
 
 RESULT: PASS ✅
 
@@ -78,3 +76,31 @@ collected 2 items
 test_blackjack.py ..
 
 ============================================================= 2 passed in 8.13s ==============================================================
+
+UPDATED CODE TEST
+
+RESULT: PASS ✅
+
+================================================================ test session starts ================================================================
+platform darwin -- Python 3.11.2, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+plugins: mock-3.10.0
+collected 2 items                                                                                                                                   
+
+test_blackjack.py ..
+
+================================================================= 2 passed in 0.05s =================================================================
+
+TEST 3
+MENU FUNCTION TEST USING MONKEYPATCH
+RESULT: PASS ✅
+
+================================================================ test session starts ================================================================
+platform darwin -- Python 3.11.2, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+plugins: mock-3.10.0
+collected 3 items                                                                                                                                   
+
+test_blackjack.py ...
+
+================================================================= 3 passed in 0.05s =================================================================
