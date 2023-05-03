@@ -13,14 +13,21 @@ def player_turn():
     # Checks if score is 21, if so players turn automatically ends
     if player_score == 21:
         return
-    # While loop to prompt player if they want to draw another card, if players score is 21 or over, players turn ends
-    while input("Do you want to hit for another card or pass to skip your turn? Type 'h' or 'p': ") == 'h':
-        print("\n")
-        deal_card(1, player_hand)
-        # The code below repeats itself because the score has to be re-calculated for conditional statements to check updated score
-        player_score = calculate_score(player_hand)
-        print(f"Your current hand: {player_hand}, current score: {player_score}")
-        if player_score == 21:
-            return
-        elif player_score > 21:
-            return
+        
+    while True: 
+        hit_pass = input("Do you want to hit for another card or pass to skip your turn? Type 'h' or 'p': ")
+
+        if hit_pass == 'h':
+            print("\n")
+            deal_card(1, player_hand)
+            # The code below repeats itself because the score has to be re-calculated for conditional statements to check updated score
+            player_score = calculate_score(player_hand)
+            print(f"Your current hand: {player_hand}, current score: {player_score}")
+            if player_score == 21:
+                return
+            elif player_score > 21:
+                return
+        elif hit_pass == 'p':
+            break
+        else:
+            print("Please type 'h' to hit for another card or 'p' to pass and skip a turn:\n")

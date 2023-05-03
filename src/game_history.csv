@@ -16,3 +16,6 @@ Game,Player Hand,Player Score,Dealer Hand,Dealer Score,Result
 15,"['♥4', '♠4', '♠2', '♣7']",17,"['♥10', '♥6', '♣Q']",26,"Dealer went over.. Lucky you, you win! 😅"
 16,"['♦A', '♣4']",15,"['♠8', '♥4', '♦3', '♥8']",23,"Dealer went over.. Lucky you, you win! 😅"
 17,"['♠Q', '♣4']",14,"['♠8', '♣3', '♦8']",19,You lost... The dealer has a higher score 🙃
+18,"['♦5', '♣3']",8,"['♣2', '♥8', '♣7']",17,You lost... The dealer has a higher score 🙃
+19,"['♣4', '♠5']",9,"['♠7', '♠6', '♠A']",24,"Dealer went over.. Lucky you, you win! 😅"
+20,"['♠5', '♣6', '♦6']",17,"['♠8', '♦J']",18,You lost... The dealer has a higher score 🙃
