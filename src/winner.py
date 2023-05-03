@@ -11,31 +11,31 @@ def determine_winner():
     player_score = calculate_score(player_hand)
     dealer_score = calculate_score(dealer_hand)
     # Display both players and dealers final hand and their final score
-    print("\n")
-    print(f"Your final hand: {player_hand}, final score: {player_score}")
-    print(f"Dealers final hand: {dealer_hand}, final score: {dealer_score}")
-    print("\n")
+    # print("\n")
+    print(f"\nYour final hand: {player_hand}, final score: {player_score}")
+    print(f"Dealers final hand: {dealer_hand}, final score: {dealer_score}\n")
+    # print("\n")
     # Determine condition of winner/loser based on Natural Blackjack, which means that they have a 21 from the first cards dealt, return their outcome
     if player_score == 21 and len(player_hand) == 2:
-        result = "Instant win! With a natural Blackjack 🤠"
+        result = "Instant win! With a natural Blackjack 🤠\n"
     elif dealer_score == 21 and len(dealer_hand) == 2:
-        result = "You lose! Dealer wins with a natural Blacjack 🤯"
+        result = "You lose! Dealer wins with a natural Blacjack 🤯\n"
     # Determine condition of winner/loser based on normal Blackjack, which means that they have a 21 from cards drawn throughout the game, return their outcome
     elif player_score == 21:
-        result = "You won with a Blackjack! 😎"
+        result = "You won with a Blackjack! 😎\n"
     elif dealer_score == 21:
-        result = "You lose! Dealer wins with a Blackjack 😤"
+        result = "You lose! Dealer wins with a Blackjack 😤\n"
     # Determine all other possible winning/losing conditions, return their outcome
     elif player_score > 21:
-        result = "You went over! And that's game over.. 😩"
+        result = "You went over! And that's game over.. 😩\n"
     elif dealer_score > 21:
-        result = "Dealer went over.. Lucky you, you win! 😅"
+        result = "Dealer went over.. Lucky you, you win! 😅\n"
     elif player_score > dealer_score:
-        result = "You're a winner! You have a higher score than the Dealer 🥳"
+        result = "You're a winner! You have a higher score than the Dealer 🥳\n"
     elif player_score < dealer_score:
-        result = "You lost... The dealer has a higher score 🙃"
+        result = "You lost... The dealer has a higher score 🙃\n"
     else:
-        result = "It's a draw! 🥲"
+        result = "It's a draw! 🥲\n"
     
     print(result)
     return result

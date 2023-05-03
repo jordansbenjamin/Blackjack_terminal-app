@@ -23,7 +23,7 @@ def player_turn():
                 deal_card(1, player_hand)
                 # The code below repeats itself because the score has to be re-calculated for conditional statements to check updated score
                 player_score = calculate_score(player_hand)
-                print(f"Your current hand: {player_hand}, current score: {player_score}")
+                print(f"\nYour current hand: {player_hand}, current score: {player_score}")
                 if player_score == 21:
                     return
                 elif player_score > 21:

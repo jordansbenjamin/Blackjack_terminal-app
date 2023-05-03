@@ -1,0 +1,7 @@
+Game,Player Hand,Player Score,Dealer Hand,Dealer Score,Result
+1,"['♦2', '♠7', '♣3', '♥10']",22,['♣A'],11,"You went over! And that's game over.. 😩
+"
+2,"['♦Q', '♣J']",20,"['♠Q', '♣4', '♦8']",22,"Dealer went over.. Lucky you, you win! 😅
+"
+3,"['♥2', '♦J', '♣6']",18,"['♣3', '♠J', '♠3', '♥3']",19,"You lost... The dealer has a higher score 🙃
+"
