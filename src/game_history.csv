@@ -1,1 +1,2 @@
-1,"['♣8', '♥8', '♥7']",23,['♦4'],4,You went over! And that's game over.. 😩
+Game,Player Hand,Player Score,Dealer Hand,Dealer Score,Result
+1,"['♣8', '♣K']",18,"['♣J', '♦6', '♥K']",26,"Dealer went over.. Lucky you, you win! 😅"

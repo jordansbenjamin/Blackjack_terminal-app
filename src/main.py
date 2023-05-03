@@ -1,6 +1,6 @@
 ##### MAIN SECTION #####
 from clear import clear_screen
-from art import main_logo, thanks_logo
+from art import main_logo, thanks_logo, wipe_logo
 from calculate import calculate_score
 from player import player_turn, player_hand
 from dealer import dealer_turn, dealer_hand
@@ -44,8 +44,6 @@ def play_blackjack():
                 clear_screen()
                 break
             case _:
-                # clear_screen()
-                # Put new line here
                 print("Invalid input, please enter 'y' or 'b':\n")
 
 def main_menu():
@@ -57,7 +55,7 @@ def main_menu():
     while user_choice != '5':
 
         print(main_logo)
-        print("Welcome to Blackjack ♠️ Please choose from the following options:")
+        print("Welcome to Blackjack ♠️ Please choose from the following options:\n")
         user_choice = menu()
 
         match user_choice:
