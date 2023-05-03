@@ -84,6 +84,7 @@ def main_menu():
                 break
             case _:
                 print("Invalid input")
+                # continue
 
 if __name__ == '__main__':
     create_csv_file()
