@@ -2,6 +2,7 @@
 from clear import clear_screen
 from art import instruction_logo, rules_logo, history_logo
 from history import view_game_history, wipe_game_history
+# from abstractions2 import back_to_menu2
 
 def menu():
     '''The menu function displays all the list of menu items for the user to select from'''
@@ -76,12 +77,13 @@ def history():
     print("\n")
     back_to_menu()
 
-def wipe_history():
-    '''This function allows the user to decide to wipe and delete the game history'''
+def wipe_history(clear_screen, wipe, back_to_menu, main_menu):
+    '''This function allows the user to decide to wipe and delete the game history, after some bug fixing the only way I'm able to figure out how the user to goes back to main menu after deciding to wipe or not to wipe was to recursively call the main menu function from the main menu function itself, thats why the functions are parameterised to be passed in as arguments'''
 
-    clear_screen()
+    clear = clear_screen
     # Print wipe logo here
-    wipe_game_history()
+    wipe = wipe
     print("\n")
-    back_to_menu()
-    
+    back = back_to_menu
+    print("\n")
+    menu = main_menu

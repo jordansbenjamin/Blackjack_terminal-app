@@ -1,10 +1,1 @@
-Game,Player Hand,Player Score,Dealer Hand,Dealer Score,Result
-1,"['♣A', '♥3', '♣5']",19,"['♦7', '♣10']",17,You're a winner! You have a higher score than the Dealer 🥳
-2,"['♦J', '♦A']",21,"['♣10', '♠K']",20,Instant win! With a natural Blackjack 🤠
-3,"['♣Q', '♣4', '♣2']",16,"['♥K', '♠10']",20,You lost... The dealer has a higher score 🙃
-4,"['♣J', '♠3', '♥Q']",23,['♣6'],6,You went over! And that's game over.. 😩
-5,"['♣8', '♠5', '♦A']",24,['♠J'],10,You went over! And that's game over.. 😩
-6,"['♦4', '♦6']",10,"['♣7', '♥8', '♣2']",17,You lost... The dealer has a higher score 🙃
-7,"['♠2', '♠4']",6,['♠Q'],10,You lost... The dealer has a higher score 🙃
-8,"['♥5', '♣7', '♠2', '♠5']",19,"['♠7', '♠8', '♣K']",25,"Dealer went over.. Lucky you, you win! 😅"
-9,"['♥7', '♥4', '♥A']",22,['♥8'],8,You went over! And that's game over.. 😩
+1,"['♣8', '♥8', '♥7']",23,['♦4'],4,You went over! And that's game over.. 😩

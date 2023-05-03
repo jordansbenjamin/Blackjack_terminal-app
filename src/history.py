@@ -49,9 +49,11 @@ def view_game_history():
 def wipe_game_history():
     '''This function allows the user to wipe out the game history from the CSV file for a fresh start'''
 
-    choice = input("Are you sure you want to wipe out the game history? This action cannot be undone. Type 'yes' to continue or 'no' to cancel: ")
+    choice = input("Are you sure you want to wipe out the game history? This action cannot be undone. Type 'yes' to continue or 'no' to cancel: ").lower().strip(' ')
+    print("\n")
+    
     try:
-        if choice.lower().strip(' ') == 'yes':
+        if choice == 'yes':
             try:
                 # clear_screen()
                 os.remove(game_history)
@@ -63,3 +65,5 @@ def wipe_game_history():
             print("Game history file wipe out has been cancelled.")
     except ValueError:
         print("Invalid input. Please type 'yes' to confirm or 'no' to cancel the wipe out.")
+    print("\n")
+    return

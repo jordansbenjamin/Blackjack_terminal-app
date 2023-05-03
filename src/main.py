@@ -6,8 +6,8 @@ from player import player_turn, player_hand
 from dealer import dealer_turn, dealer_hand
 from cards import init_deck
 from winner import determine_winner
-from menu import menu, instructions, rules, history, wipe_history
-from history import create_csv_file, view_game_history, write_game_history
+from menu import menu, instructions, rules, history, wipe_history, back_to_menu
+from history import create_csv_file, write_game_history, wipe_game_history
 from abstractions import init_deal, print_first_hand_and_score, clean_slate
 
 def play_blackjack():
@@ -75,8 +75,8 @@ def main_menu():
                 # This will get you to view the history and score for the game, leaving the menu
                 history()
             case '5':
-                # This will get you to view the history and score for the game, leaving the menu
-                wipe_history()
+                # This will let the user decide if they want to wipe out the game history
+                wipe_history(clear_screen(), wipe_game_history(), back_to_menu(), main_menu())
             case '6':
                 # Exits the program entirely
                 clear_screen()
