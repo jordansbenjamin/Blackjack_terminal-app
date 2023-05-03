@@ -1,13 +1,13 @@
 ##### MAIN SECTION #####
 from clear import clear_screen
-from art import main_logo, thanks_logo, wipe_logo
+from art import main_logo, thanks_logo
 from calculate import calculate_score
 from player import player_turn, player_hand
 from dealer import dealer_turn, dealer_hand
 from cards import init_deck
 from winner import determine_winner
-from menu import menu, instructions, rules, history, wipe_history, back_to_menu
-from history import create_csv_file, write_game_history, wipe_game_history
+from menu import menu, instructions, rules, history, wipe_history
+from history import create_csv_file, write_game_history
 from abstractions import init_deal, print_first_hand_and_score, clean_slate
 
 def play_blackjack():
@@ -32,7 +32,7 @@ def play_blackjack():
 
     while True:
         try:
-            play = input("Continue playing a game of Blackjack? Type 'y' to continue or 'b' to go back to main menu:").lower().strip(' ')
+            play = input("Continue playing a game of Blackjack? Type 'y' to continue or 'b' to go back to main menu: ").lower().strip(' ')
             
             match play:
                 case 'y':
@@ -46,9 +46,11 @@ def play_blackjack():
                     break
                 case _:
                     # clear_screen()
-                    raise ValueError("Invalid input, please enter 'y' or 'b':\n")
+                    raise ValueError("\nInvalid Input, please enter 'y' or 'b':\n")
         except ValueError as InvalidInput:
             print(InvalidInput)
+            # input("Press Enter to continue...")
+            # clear_screen()
 
 def main_menu():
     '''This function serves as the main menu which introduces the user to the program and so the user can interact and navigate throughout the program'''

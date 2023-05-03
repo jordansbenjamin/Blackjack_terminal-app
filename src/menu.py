@@ -1,6 +1,6 @@
 ##### MENU SECTION #####
 from clear import clear_screen
-from art import instruction_logo, rules_logo, history_logo, wipe_logo
+from art import instruction_logo, rules_logo, history_logo
 from history import view_game_history, wipe_game_history
 
 def menu():
@@ -23,12 +23,15 @@ def back_to_menu():
     while True:
         back = input("Press 'b' to go back to the Main Menu: ").lower().strip(' ')
         
-        match back:
-            case 'b':
-                clear_screen()
-                return
-            case _:
-                print("Please type 'b': ")
+        try:
+            match back:
+                    case 'b':
+                        clear_screen()
+                        return
+                    case _:
+                        raise ValueError("\nInvalid Input! Please type 'b':\n")
+        except ValueError as InvalidInput:
+            print(InvalidInput)
 
 def instructions():
     '''This function allows the user to view the instructions for the game'''
