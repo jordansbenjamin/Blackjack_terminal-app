@@ -15,19 +15,22 @@ def player_turn():
         return
         
     while True: 
-        hit_pass = input("Do you want to hit for another card or pass to skip your turn? Type 'h' or 'p': ").lower().strip(' ')
+        hit_pass = input("\nDo you want to hit for another card or pass to skip your turn? Type 'h' or 'p': ").lower().strip(' ')
 
-        if hit_pass == 'h':
-            print("\n")
-            deal_card(1, player_hand)
-            # The code below repeats itself because the score has to be re-calculated for conditional statements to check updated score
-            player_score = calculate_score(player_hand)
-            print(f"Your current hand: {player_hand}, current score: {player_score}")
-            if player_score == 21:
-                return
-            elif player_score > 21:
-                return
-        elif hit_pass == 'p':
-            break
-        else:
-            print("Please type 'h' to hit for another card or 'p' to pass and skip a turn:\n")
+        try:
+            if hit_pass == 'h':
+                # print("\n")
+                deal_card(1, player_hand)
+                # The code below repeats itself because the score has to be re-calculated for conditional statements to check updated score
+                player_score = calculate_score(player_hand)
+                print(f"Your current hand: {player_hand}, current score: {player_score}")
+                if player_score == 21:
+                    return
+                elif player_score > 21:
+                    return
+            elif hit_pass == 'p':
+                break
+            else:
+                raise ValueError("\nInvalid Input! Please enter 'h' to hit for another card or 'p' to pass and skip a turn:")
+        except ValueError as InvalidInput:
+            print(InvalidInput)

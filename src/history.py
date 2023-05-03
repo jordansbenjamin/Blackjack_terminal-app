@@ -16,7 +16,7 @@ def create_csv_file():
                 writer = csv.writer(file)
                 writer.writerow(['Game', 'Player Hand', 'Player Score', 'Dealer Hand', 'Dealer Score', 'Result'])
     except FileNotFoundError:
-        print("File Not Found.")
+        print("Game history file not Found.")
     except PermissionError:
         print("Permission denied. Please make sure you have permission to create a file in the specified directory.")
 

@@ -1,7 +1,0 @@
-Game,Player Hand,Player Score,Dealer Hand,Dealer Score,Result
-1,"['♣J', '♠10']",20,"['♦5', '♣3', '♥10']",18,You're a winner! You have a higher score than the Dealer 🥳
-2,"['♠J', '♦10']",20,"['♦J', '♣Q']",20,It's a draw! 🥲
-3,"['♦4', '♦10']",14,"['♣4', '♥8', '♣5']",17,You lost... The dealer has a higher score 🙃
-4,"['♥7', '♠8']",15,"['♥6', '♣10', '♦K']",26,"Dealer went over.. Lucky you, you win! 😅"
-5,"['♥5', '♠2', '♣K']",17,"['♥7', '♦5', '♥8']",20,You lost... The dealer has a higher score 🙃
-6,"['♥5', '♦Q']",15,"['♣4', '♣J', '♣K']",24,"Dealer went over.. Lucky you, you win! 😅"
