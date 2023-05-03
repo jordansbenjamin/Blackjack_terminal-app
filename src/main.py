@@ -31,20 +31,24 @@ def play_blackjack():
     write_game_history(player_hand, player_score, dealer_hand, dealer_score, winner)
 
     while True:
-        play = input("Continue playing a game of Blackjack? Type 'y' to continue or 'b' to go back to main menu: ").lower().strip(' ')
-        
-        match play:
-            case 'y':
-                # Recursively starts the game for another round
-                clean_slate()
-                play_blackjack()
-                break
-            case 'b':
-                # Exits loop and function to go back to main menu
-                clear_screen()
-                break
-            case _:
-                print("Invalid input, please enter 'y' or 'b':\n")
+        try:
+            play = input("Continue playing a game of Blackjack? Type 'y' to continue or 'b' to go back to main menu:").lower().strip(' ')
+            
+            match play:
+                case 'y':
+                    # Recursively starts the game for another round
+                    clean_slate()
+                    play_blackjack()
+                    break
+                case 'b':
+                    # Exits loop and function to go back to main menu
+                    clear_screen()
+                    break
+                case _:
+                    # clear_screen()
+                    raise ValueError("Invalid input, please enter 'y' or 'b':\n")
+        except ValueError as InvalidInput:
+            print(InvalidInput)
 
 def main_menu():
     '''This function serves as the main menu which introduces the user to the program and so the user can interact and navigate throughout the program'''
@@ -52,37 +56,41 @@ def main_menu():
     clear_screen()
     user_choice = ''
 
-    while user_choice != '5':
+    while user_choice != '6':
 
         print(main_logo)
         print("Welcome to Blackjack ♠️ Please choose from the following options:\n")
         user_choice = menu()
 
-        match user_choice:
-            case '1':
-                # Recursively starts the game or to go for another round after navigating menu
-                clean_slate()
-                play_blackjack()
-            case '2':
-                # This will get you to view the instructions for the game, leaving the menu
-                instructions()
-            case '3':
-                # This will get you to view the house rules of the game, leaving the menu
-                rules()
-            case '4':
-                # This will get you to view the history and score for the game, leaving the menu
-                history()
-            case '5':
-                # This will let the user decide if they want to wipe out the game history
-                wipe_history(clear_screen(), wipe_game_history(), back_to_menu(), main_menu())
-            case '6':
-                # Exits the program entirely
-                clear_screen()
-                print(thanks_logo)
-                break
-            case _:
-                print("Invalid input")
-                # continue
+        try:
+            match user_choice:
+                case '1':
+                    # Recursively starts the game or to go for another round after navigating menu
+                    clean_slate()
+                    play_blackjack()
+                case '2':
+                    # This will get you to view the instructions for the game, leaving the menu
+                    instructions()
+                case '3':
+                    # This will get you to view the house rules of the game, leaving the menu
+                    rules()
+                case '4':
+                    # This will get you to view the history and score for the game, leaving the menu
+                    history()
+                case '5':
+                    # This will let the user decide if they want to wipe out the game history
+                    wipe_history()
+                case '6':
+                    # Exits the program entirely
+                    clear_screen()
+                    print(thanks_logo)
+                    break
+                case _:
+                    raise ValueError("Invalid Input, please enter an option from the menu (1-6):\n")
+        except ValueError as InvalidInput:
+            print("\n" + str(InvalidInput))
+            input("Press Enter to continue...")
+            clear_screen()
 
 if __name__ == '__main__':
     create_csv_file()

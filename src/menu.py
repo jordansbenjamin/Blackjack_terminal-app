@@ -1,7 +1,7 @@
 ##### MENU SECTION #####
 from clear import clear_screen
 from art import instruction_logo, rules_logo, history_logo, wipe_logo
-from history import view_game_history
+from history import view_game_history, wipe_game_history
 
 def menu():
     '''The menu function displays all the list of menu items for the user to select from'''
@@ -11,7 +11,7 @@ def menu():
     print("3. Enter 3 to view house rules")
     print("4. Enter 4 to check your game history")
     print("5. Enter 5 to wipe game history")
-    print("6. Enter 6 to exit Blackjack")
+    print("6. Enter 6 to exit Blackjack\n")
 
     # Prompt user for their selection and return selection
     choice = input("Choose an option from the menu: ").strip(' ')
@@ -75,10 +75,9 @@ def history():
     print("\n")
     back_to_menu()
 
-def wipe_history(clear_screen, wipe, back_to_menu, main_menu):
-    '''This function allows the user to decide to wipe and delete the game history, after some bug fixing the only way I'm able to figure out how the user to goes back to main menu after deciding to wipe or not to wipe was to recursively call the main menu function from the main menu function itself, thats why the functions are parameterised to be passed in as arguments'''
+def wipe_history():
+    '''This function allows the user to decide to wipe and delete the game history, called from the wipe_game_history() function'''
 
-    clear = clear_screen
-    wipe = wipe
-    back = back_to_menu
-    menu = main_menu
+    clear_screen()
+    wipe_game_history()
+    back_to_menu()
