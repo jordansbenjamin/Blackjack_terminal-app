@@ -11,3 +11,8 @@ Game,Player Hand,Player Score,Dealer Hand,Dealer Score,Result
 10,"['♠4', '♣2', '♠2', '♥Q']",18,"['♥K', '♥A']",21,You lose! Dealer wins with a natural Blacjack 🤯
 11,"['♥K', '♥5', '♥4']",19,"['♦K', '♥A']",21,You lose! Dealer wins with a natural Blacjack 🤯
 12,"['♦5', '♠7', '♥6']",18,"['♦3', '♦K', '♦10']",23,"Dealer went over.. Lucky you, you win! 😅"
+13,"['♠3', '♠10', '♠7']",20,"['♣K', '♣2', '♠K']",22,"Dealer went over.. Lucky you, you win! 😅"
+14,"['♠A', '♦8']",19,"['♣5', '♥7', '♣K']",22,"Dealer went over.. Lucky you, you win! 😅"
+15,"['♥4', '♠4', '♠2', '♣7']",17,"['♥10', '♥6', '♣Q']",26,"Dealer went over.. Lucky you, you win! 😅"
+16,"['♦A', '♣4']",15,"['♠8', '♥4', '♦3', '♥8']",23,"Dealer went over.. Lucky you, you win! 😅"
+17,"['♠Q', '♣4']",14,"['♠8', '♣3', '♦8']",19,You lost... The dealer has a higher score 🙃

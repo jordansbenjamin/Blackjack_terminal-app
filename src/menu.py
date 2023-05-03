@@ -19,13 +19,17 @@ def menu():
 
 def back_to_menu():
     '''A function that allows the user to navigate back to the main menu'''
-
-    back = input("Press 'b' to go back to the Main Menu: ")
-
-    match back:
-        case 'b':
-            clear_screen()
-            return
+    
+    while True:
+        back = input("Press 'b' to go back to the Main Menu: ")
+        
+        match back:
+            case 'b':
+                clear_screen()
+                return
+            case _:
+                # clear_screen()
+                print("Please type 'b': ")
 
 def instructions():
     '''This function allows the user to view the instructions for the game'''
@@ -79,5 +83,5 @@ def wipe_history():
     # Print wipe logo here
     wipe_game_history()
     print("\n")
-    # back_to_menu()
+    back_to_menu()
     

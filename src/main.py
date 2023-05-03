@@ -44,7 +44,9 @@ def play_blackjack():
                 clear_screen()
                 break
             case _:
-                print("Invalid input, please enter 'y' or 'b'.")
+                # clear_screen()
+                # Put new line here
+                print("Invalid input, please enter 'y' or 'b':\n")
 
 def main_menu():
     '''This function serves as the main menu which introduces the user to the program and so the user can interact and navigate throughout the program'''
