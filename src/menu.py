@@ -7,12 +7,12 @@ from history import view_game_history, wipe_game_history
 def menu():
     '''The menu function displays all the list of menu items for the user to select from'''
 
-    print(f"{attr('bold')}{fg(2)}1. Start playing Blackjack{attr('reset')}")
-    print(f"{attr('bold')}{fg(51)}2. View instructions{attr('reset')}")
-    print(f"{attr('bold')}{fg(21)}3. View house rules")
-    print(f"{attr('bold')}{fg(159)}4. Check your game history")
-    print(f"{attr('bold')}{fg(3)}5. Wipe game history")
-    print(f"{attr('bold')}{fg(196)}6. Exit Blackjack{attr('reset')}\n")
+    print(f"{attr(1)}{fg(2)}1. Start playing Blackjack{attr('reset')}")
+    print(f"{attr(1)}{fg(51)}2. View instructions{attr('reset')}")
+    print(f"{attr(1)}{fg(21)}3. View house rules")
+    print(f"{attr(1)}{fg(159)}4. Check your game history")
+    print(f"{attr(1)}{fg(3)}5. Wipe game history")
+    print(f"{attr(1)}{fg(196)}6. Exit Blackjack{attr('reset')}\n")
 
     # Prompt user for their selection and return selection
     choice = input("Choose a numbered option from the menu: ").strip(' ')
@@ -22,7 +22,7 @@ def back_to_menu():
     '''A function that allows the user to navigate back to the main menu'''
     
     while True:
-        back = input("Press 'b' to go back to the Main Menu: ").lower().strip(' ')
+        back = input(f"Press {fg(9)}{attr(1)}'b'{attr('reset')} to go back to the Main Menu: ").lower().strip(' ')
         
         try:
             match back:
@@ -30,7 +30,7 @@ def back_to_menu():
                         clear_screen()
                         return
                     case _:
-                        raise ValueError("\nInvalid Input! Please type 'b':\n")
+                        raise ValueError(f"\n{attr(1)}{fg(9)}Invalid Input! Please type 'b':{attr('reset')}\n")
         except ValueError as InvalidInput:
             print(InvalidInput)
 

@@ -34,7 +34,7 @@ def play_blackjack():
 
     while True:
         try:
-            play = input("Continue playing a game of Blackjack? Type 'y' to continue or 'b' to go back to main menu: ").lower().strip(' ')
+            play = input(f"Continue playing a game of Blackjack? Type {fg('green')}{attr('bold')}'y'{attr('reset')} to continue or {fg('red')}{attr('bold')}'b'{attr('reset')} to go back to main menu: ").lower().strip(' ')
             
             match play:
                 case 'y':
@@ -47,11 +47,11 @@ def play_blackjack():
                     break
                 case _:
                     clear_screen()
-                    raise ValueError("\nInvalid Input, please enter 'y' or 'b':\n")
+                    raise ValueError(f"{fg(9)}{attr(1)}\nInvalid Input! Please enter 'y' or 'b':{attr('reset')}\n")
         except ValueError as InvalidInput:
             # Add invalid logo here?
             print(InvalidInput)
-            input("Press Enter to continue...")
+            input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
             clear_screen()
 
 def main_menu():
@@ -63,7 +63,7 @@ def main_menu():
     while user_choice != '6':
 
         print(main_logo)
-        print(f"{attr('bold')}Welcome to {fg('red')}Blackjack ♠️{attr('reset')} Please choose from the following options:\n")
+        print(f"{attr(1)}Welcome to {fg(9)}Blackjack ♠️{attr('reset')} Please choose from the following options:\n")
         user_choice = menu()
 
         try:
@@ -91,11 +91,11 @@ def main_menu():
                     break
                 case _:
                     clear_screen()
-                    raise ValueError(f"{fg('red')}{attr('bold')}{attr('underlined')}Invalid Input! Please enter a numbered option from the menu (1-6):{attr('reset')}\n")
+                    raise ValueError(f"{fg(9)}{attr(1)}Invalid Input! Please enter a numbered option from the menu (1-6):{attr('reset')}\n")
         except ValueError as InvalidInput:
             # Add invalid logo here?
             print("\n" + str(InvalidInput))
-            input(f"{fg('green')}{attr('bold')}Press Enter to continue...{attr('reset')}")
+            input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
             clear_screen()
 
 if __name__ == '__main__':
