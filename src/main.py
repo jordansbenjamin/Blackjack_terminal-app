@@ -9,7 +9,7 @@ from cards import init_deck
 from winner import determine_winner
 from menu import menu, instructions, rules, history, wipe_history
 from history import create_csv_file, write_game_history
-from abstractions import init_deal, print_first_hand_and_score, clean_slate
+from abstractions import init_deal, print_first_hand_and_score, clean_slate, exit_game_to_menu, exit_game
 
 def play_blackjack():
     '''This functions serves as the main function body of the program that includes other parts, section and functions of the program. All combined together to serves as the main flow which runs to play the Blackjack program'''
@@ -55,10 +55,7 @@ def play_blackjack():
                 input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
                 clear_screen()
     except KeyboardInterrupt:
-        clear_screen()
-        print(f"{fg(9)}{attr(1)}\nYou have stopped playing Blackjack. You will now be returned to the main menu.{attr('reset')}\n")
-        input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
-        clear_screen()
+        exit_game_to_menu()
 
 def main_menu():
     '''This function serves as the main menu which introduces the user to the program and so the user can interact and navigate throughout the program'''
@@ -105,10 +102,7 @@ def main_menu():
                 input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
                 clear_screen()
     except KeyboardInterrupt:
-        clear_screen()
-        print(f"{fg(9)}{attr(1)}\nYou have stopped playing Blackjack. You will now exit the game.{attr('reset')}\n")
-        input(f"{fg(2)}{attr(1)}Press Enter to exit...{attr('reset')}")
-        clear_screen()
+        exit_game()
 
 if __name__ == '__main__':
     create_csv_file()

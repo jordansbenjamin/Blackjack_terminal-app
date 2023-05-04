@@ -28,3 +28,19 @@ def clean_slate():
     player_hand.clear()
     dealer_hand.clear()
     clear_screen()
+
+def exit_game_to_menu():
+    '''This function handles the exception message for the user when exiting the game using the ctrl + c command and leads them back to the main menu'''
+
+    clear_screen()
+    print(f"{fg(9)}{attr(1)}\nYou have stopped playing Blackjack. You will now be returned to the main menu.{attr('reset')}\n")
+    input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
+    clear_screen()
+
+def exit_game():
+    '''This function handles the exception message for the user when exiting the game using the ctrl + c command and exits the program entirely'''
+
+    clear_screen()
+    print(f"{fg(9)}{attr(1)}\nYou have stopped playing Blackjack. You will now exit the game.{attr('reset')}\n")
+    input(f"{fg(2)}{attr(1)}Press Enter to exit...{attr('reset')}")
+    clear_screen()
