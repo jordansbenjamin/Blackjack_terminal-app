@@ -12,7 +12,9 @@ from abstractions import init_deal, print_first_hand_and_score, clean_slate
 
 def play_blackjack():
     '''This functions serves as the main function body of the program that includes other parts, section and functions of the program. All combined together to serves as the main flow which runs to play the Blackjack program'''
-
+    
+    # Starts the game on a clean slate, clearing the player and dealers hand and clears screen
+    clean_slate()
     print(main_logo)
     # Initially deals 2 cards for player to start the game and 1 card for dealer
     init_deal()
@@ -25,8 +27,7 @@ def play_blackjack():
     # Determines winner and displays outcome of the game
     winner = determine_winner()
     # Calculates score for final hand, cannot be abstracted as variable needs to be accessed as it is used as arguments
-    player_score = calculate_score(player_hand)
-    dealer_score = calculate_score(dealer_hand)
+    player_score, dealer_score = calculate_score(player_hand), calculate_score(dealer_hand)
     # Writes game results to CSV
     write_game_history(player_hand, player_score, dealer_hand, dealer_score, winner)
 
@@ -37,7 +38,6 @@ def play_blackjack():
             match play:
                 case 'y':
                     # Recursively starts the game for another round
-                    clean_slate()
                     play_blackjack()
                     break
                 case 'b':
@@ -45,12 +45,13 @@ def play_blackjack():
                     clear_screen()
                     break
                 case _:
-                    # clear_screen()
+                    clear_screen()
                     raise ValueError("\nInvalid Input, please enter 'y' or 'b':\n")
         except ValueError as InvalidInput:
+            # Add invalid logo here?
             print(InvalidInput)
-            # input("Press Enter to continue...")
-            # clear_screen()
+            input("Press Enter to continue...")
+            clear_screen()
 
 def main_menu():
     '''This function serves as the main menu which introduces the user to the program and so the user can interact and navigate throughout the program'''
@@ -68,7 +69,7 @@ def main_menu():
             match user_choice:
                 case '1':
                     # Recursively starts the game or to go for another round after navigating menu
-                    clean_slate()
+                    # clean_slate()
                     play_blackjack()
                 case '2':
                     # This will get you to view the instructions for the game, leaving the menu
@@ -88,8 +89,10 @@ def main_menu():
                     print(thanks_logo)
                     break
                 case _:
+                    clear_screen()
                     raise ValueError("Invalid Input, please enter an option from the menu (1-6):\n")
         except ValueError as InvalidInput:
+            # Add invalid logo here?
             print("\n" + str(InvalidInput))
             input("Press Enter to continue...")
             clear_screen()

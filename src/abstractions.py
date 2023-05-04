@@ -22,7 +22,7 @@ def print_first_hand_and_score():
     print(f"Dealers first card: {dealer_hand}, current score: {dealer_score}")
 
 def clean_slate():
-    '''This function resets the players and dealers hand for a clean slate before starting another game'''
+    '''This function resets the players and dealers hand for a clean slate before starting another game, additionally clears the screen'''
     
     player_hand.clear()
     dealer_hand.clear()
