@@ -1,7 +1,7 @@
 #!/bin/bash
 
-check_python() {
-    if ! [[ -x "$(command -v python3)"]]; then
+check_python(){
+    if ! [[ -x "$(command -v python3)" ]]; then
         echo "Error: 
             To play Blackjack, Python 3 is required and it looks like you don't have it installed.
             Please install Python 3, you can do so by checking out: https://realpython.com/installing-python/" >&2
@@ -46,5 +46,7 @@ clear
 
 install_requirements requirements.txt
 echo "Requirements installed!"
+
+clear
 
 echo "Setup complete! Virtual environment initialised, dependencies and requirements installed, to start playing Blackjack, run: ./run_bj.sh"

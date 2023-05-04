@@ -1,7 +1,7 @@
 #!/bin/bash
 
-check_python() {
-    if ! [[ -x "$(command -v python3)"]]; then
+check_python(){
+    if ! [[ -x "$(command -v python3)" ]]; then
         echo "Error: 
             To play Blackjack, Python 3 is required and it looks like you don't have it installed.
             Please install Python 3, you can do so by checking out: https://realpython.com/installing-python/" >&2
@@ -22,12 +22,15 @@ check_active_venv(){
         clear
         python3 main.py
     else
-        echo "Vitual environment was not active, activating now..."
+        echo "Virtual environment was not active, activating now..."
 
-        source blackjack/bin/activate
+        source blackjack-venv/bin/activate
+        clear
         python3 main.py
+    fi
 }
 
+# Main execution of bash script
 check_python
 check_venv_exists
 check_active_venv
