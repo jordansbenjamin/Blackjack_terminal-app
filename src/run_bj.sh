@@ -12,6 +12,7 @@ if ! [[ -d "blackjack-venv" ]]
 then
     echo "Error:
         Virtual environment does not exist, please create a virtual environment by running: ./setup_bj.sh"
+    exit 1
 fi
 
 if [[ -n "$VIRTUAL_ENV" ]]
