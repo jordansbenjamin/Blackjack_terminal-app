@@ -1,4 +1,5 @@
 ##### MENU SECTION #####
+from colored import fg, bg, attr
 from clear import clear_screen
 from art import instruction_logo, rules_logo, history_logo
 from history import view_game_history, wipe_game_history
@@ -6,15 +7,15 @@ from history import view_game_history, wipe_game_history
 def menu():
     '''The menu function displays all the list of menu items for the user to select from'''
 
-    print("1. Enter 1 to start playing Blackjack")
-    print("2. Enter 2 to view instructions")
-    print("3. Enter 3 to view house rules")
-    print("4. Enter 4 to check your game history")
-    print("5. Enter 5 to wipe game history")
-    print("6. Enter 6 to exit Blackjack\n")
+    print(f"{attr('bold')}{fg(2)}1. Start playing Blackjack{attr('reset')}")
+    print(f"{attr('bold')}{fg(51)}2. View instructions{attr('reset')}")
+    print(f"{attr('bold')}{fg(21)}3. View house rules")
+    print(f"{attr('bold')}{fg(159)}4. Check your game history")
+    print(f"{attr('bold')}{fg(3)}5. Wipe game history")
+    print(f"{attr('bold')}{fg(196)}6. Exit Blackjack{attr('reset')}\n")
 
     # Prompt user for their selection and return selection
-    choice = input("Choose an option from the menu: ").strip(' ')
+    choice = input("Choose a numbered option from the menu: ").strip(' ')
     return choice
 
 def back_to_menu():
