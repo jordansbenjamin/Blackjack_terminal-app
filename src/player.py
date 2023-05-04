@@ -1,4 +1,5 @@
 ##### PLAYER SECTION #####
+from colored import fg, attr
 from calculate import calculate_score
 from cards import deal_card
 
@@ -15,7 +16,7 @@ def player_turn():
         return
         
     while True: 
-        hit_pass = input("\nDo you want to hit for another card or pass to skip your turn? Type 'h' or 'p': ").lower().strip(' ')
+        hit_pass = input(f"\nDo you want to hit for another card or pass to skip your turn? Type {attr(1)}{fg(2)}'h'{attr('reset')} or {attr(1)}{fg(9)}'p'{attr('reset')}: ").lower().strip(' ')
 
         try:
             if hit_pass == 'h':
@@ -23,7 +24,7 @@ def player_turn():
                 deal_card(1, player_hand)
                 # The code below repeats itself because the score has to be re-calculated for conditional statements to check updated score
                 player_score = calculate_score(player_hand)
-                print(f"\nYour current hand: {player_hand}, current score: {player_score}")
+                print(f"\n{attr(1)}{fg(21)}Your current hand:{attr('reset')} {player_hand}, {attr(1)}{fg(21)}current score:{attr('reset')} {player_score}")
                 if player_score == 21:
                     return
                 elif player_score > 21:
@@ -31,6 +32,6 @@ def player_turn():
             elif hit_pass == 'p':
                 break
             else:
-                raise ValueError("\nInvalid Input! Please enter 'h' to hit for another card or 'p' to pass and skip a turn:")
+                raise ValueError(f"\n{attr(1)}{fg(9)}Invalid Input! Please enter 'h' to hit for another card or 'p' to pass and skip a turn:{attr('reset')}")
         except ValueError as InvalidInput:
             print(InvalidInput)

@@ -1,4 +1,5 @@
 ##### WINNER SECTION #####
+from colored import fg, attr
 from calculate import calculate_score
 from player import player_hand
 from dealer import dealer_hand
@@ -10,8 +11,8 @@ def determine_winner():
     # Sum up final player and dealer score
     player_score, dealer_score = calculate_score(player_hand), calculate_score(dealer_hand)
     # Display both players and dealers final hand and their final score
-    print(f"\nYour final hand: {player_hand}, final score: {player_score}")
-    print(f"Dealers final hand: {dealer_hand}, final score: {dealer_score}\n")
+    print(f"\n{attr(1)}{fg(21)}Your final hand:{attr('reset')} {player_hand}, {attr(1)}{fg(21)}final score:{attr('reset')} {player_score}")
+    print(f"{attr(1)}{fg(21)}Dealers final hand:{attr('reset')} {dealer_hand}, {attr(1)}{fg(21)}final score:{attr('reset')} {dealer_score}\n")
     # Determine condition of winner/loser based on Natural Blackjack, which means that they have a 21 from the first cards dealt, return their outcome
     if player_score == 21 and len(player_hand) == 2:
         result = "Instant win! With a natural Blackjack 🤠\n"

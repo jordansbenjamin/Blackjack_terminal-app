@@ -1,6 +1,7 @@
 ##### GAME HISTORY CSV SECTION #####
 import csv
 import os
+from colored import fg, attr
 from prettytable import PrettyTable
 from clear import clear_screen
 from art import wipe_logo
@@ -62,24 +63,33 @@ def view_game_history():
 def wipe_game_history():
     '''This function allows the user to wipe out the game history from the CSV file for a fresh start'''
 
-    print(wipe_logo)
-    choice = input("Are you sure you want to wipe out the game history? This action cannot be undone. Type 'yes' to continue or 'no' to cancel: ").lower().strip(' ')
-    print("\n")
-    
-    try:
-        if choice == 'yes':
-            try:
+    while True:
+        print(wipe_logo)
+        choice = input(f"Are you sure you want to wipe out the game history? This action cannot be undone. Type {attr(1)}{fg(2)}'yes'{attr('reset')} to continue or {attr(1)}{fg(9)}'no'{attr('reset')} to cancel: ").lower().strip(' ')
+        print("\n")
+        
+        try:
+            if choice == 'yes':
+                try:
+                    clear_screen()
+                    print(wipe_logo)
+                    os.remove(game_history)
+                    print("The game history has been sucessfully wiped out.\n")
+                    break
+                except FileNotFoundError:
+                    print("Error! Game history file not found.\n")
+                    break
+            elif choice.lower() == 'no':
                 clear_screen()
                 print(wipe_logo)
-                os.remove(game_history)
-                print("The game history has been sucessfully wiped out.")
-            except FileNotFoundError:
-                print("Game history file not found.")
-        elif choice.lower() == 'no':
+                print("Game history file wipe out has been cancelled.\n")
+                break
+            else:
+                raise ValueError(f"{attr(1)}{fg(9)}Invalid input! Please type 'yes' to confirm or 'no' to cancel the wipe out.{attr('reset')}")
+        except ValueError as InvalidInput:
+            print(InvalidInput)
+            print("\n")
+            input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
             clear_screen()
-            print(wipe_logo)
-            print("Game history file wipe out has been cancelled.")
-    except ValueError:
-        print("Invalid input. Please type 'yes' to confirm or 'no' to cancel the wipe out.")
-    print("\n")
+            continue
     return
