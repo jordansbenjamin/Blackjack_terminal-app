@@ -5,6 +5,7 @@ from player import *
 from dealer import *
 from calculate import *
 from winner import *
+from history import *
 
 # NOTE: Running tests works with the command(pytest -s)
 
@@ -157,4 +158,30 @@ def test_menu(monkeypatch, capsys):
     assert captured.out == expected
     # Result: Pass ✅
 
-# TODO: Test exceptions if they are raised appropriately
+### TEST 4 ###
+'''This test suite checks for different cases and output results based on the users input when wiping the game history file, it's an important test suite because it validates the results and its expected outcome'''
+# TEST CASE 1 (User enters 'yes')
+def test_wipe_game_history_yes(monkeypatch, capsys):
+    '''This test case will check if wiping the game's history works based on the user's input, in this case when the use enters (yes)'''
+    # Set user input to 'yes' using monkeypatch simulation
+    monkeypatch.setattr('builtins.input', lambda _: 'yes')
+    # Calls the function for 
+    wipe_game_history()
+    captured = capsys.readouterr()  # Capture the printed output
+    expected_output = "The game history has been sucessfully wiped out."
+    # Expected Result: Pass
+    assert expected_output in captured.out
+    # Result: Pass ✅
+
+# TEST CASE 2 (User enters 'no')
+def test_wipe_game_history_no(monkeypatch, capsys):
+    '''This test case will check if wiping the game's history works based on the user's input, in this case when the use enters (no)'''
+    # Set user input to 'no' using monkeypatch simulation
+    monkeypatch.setattr('builtins.input', lambda _: 'no')
+    # Calls the function for 
+    wipe_game_history()
+    captured = capsys.readouterr()  # Capture the printed output
+    expected_output = "Game history file wipe out has been cancelled."
+    # Expected Result: Pass
+    assert expected_output in captured.out
+    # Result: Pass ✅

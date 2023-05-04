@@ -104,3 +104,27 @@ collected 3 items
 test_blackjack.py ...
 
 ================================================================= 3 passed in 0.05s =================================================================
+
+TEST 4
+WIPE GAME HISTORY FUNCTION USING MONKEYPATCH
+RESULT: PASS ✅
+
+=========================================================== test session starts ============================================================
+platform darwin -- Python 3.11.2, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+plugins: mock-3.10.0
+collected 4 items                                                                                                                          
+
+test_blackjack.py ....
+
+============================================================ 4 passed in 0.05s =============================================================
+
+=========================================================== test session starts ============================================================
+platform darwin -- Python 3.11.2, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+plugins: mock-3.10.0
+collected 5 items                                                                                                                          
+
+test_blackjack.py .....
+
+============================================================ 5 passed in 0.06s =============================================================

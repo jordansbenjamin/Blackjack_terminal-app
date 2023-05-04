@@ -8,13 +8,10 @@ def determine_winner():
     '''This function involves the logic for determining conditions of winner and displaying the final score and outcome'''
     
     # Sum up final player and dealer score
-    player_score = calculate_score(player_hand)
-    dealer_score = calculate_score(dealer_hand)
+    player_score, dealer_score = calculate_score(player_hand), calculate_score(dealer_hand)
     # Display both players and dealers final hand and their final score
-    # print("\n")
     print(f"\nYour final hand: {player_hand}, final score: {player_score}")
     print(f"Dealers final hand: {dealer_hand}, final score: {dealer_score}\n")
-    # print("\n")
     # Determine condition of winner/loser based on Natural Blackjack, which means that they have a 21 from the first cards dealt, return their outcome
     if player_score == 21 and len(player_hand) == 2:
         result = "Instant win! With a natural Blackjack 🤠\n"
