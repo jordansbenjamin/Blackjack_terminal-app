@@ -3,7 +3,7 @@ import csv
 import os
 from colored import fg, attr
 from prettytable import PrettyTable
-from clear import clear_screen
+from clear import clear
 from art import wipe_logo
 
 game_history = 'game_history.csv'
@@ -71,7 +71,7 @@ def wipe_game_history():
         try:
             if choice == 'yes':
                 try:
-                    clear_screen()
+                    clear()
                     print(wipe_logo)
                     os.remove(game_history)
                     print("The game history has been sucessfully wiped out.\n")
@@ -80,7 +80,7 @@ def wipe_game_history():
                     print("Error! Game history file not found.\n")
                     break
             elif choice.lower() == 'no':
-                clear_screen()
+                clear()
                 print(wipe_logo)
                 print("Game history file wipe out has been cancelled.\n")
                 break
@@ -90,6 +90,6 @@ def wipe_game_history():
             print(InvalidInput)
             print("\n")
             input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
-            clear_screen()
+            clear()
             continue
     return

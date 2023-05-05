@@ -37,8 +37,12 @@ check_python
 create_virtual_venv blackjack-venv
 echo "Virtual environment created!"
 
+sleep 1
+
 activate_virtual_venv blackjack-venv
 echo "Virtual environment activated!"
+
+sleep 1
 
 upgrade_pip
 
@@ -47,6 +51,8 @@ clear
 install_requirements requirements.txt
 echo "Requirements installed!"
 
+sleep 1
+
 clear
 
-echo "Setup complete! Virtual environment initialised, dependencies and requirements installed, to start playing Blackjack, run: ./run_bj.sh"
+echo "Setup complete! Virtual environment initialised, dependencies installed, to start playing Blackjack, run: ./run_bj.sh"

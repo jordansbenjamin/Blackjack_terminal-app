@@ -1,6 +1,6 @@
 ##### MENU SECTION #####
 from colored import fg, attr
-from clear import clear_screen
+from clear import clear
 from art import instruction_logo, rules_logo, history_logo
 from history import view_game_history, wipe_game_history
 
@@ -27,7 +27,7 @@ def back_to_menu():
         try:
             match back:
                     case 'b':
-                        clear_screen()
+                        clear()
                         return
                     case _:
                         raise ValueError(f"\n{attr(1)}{fg(9)}Invalid Input! Please type 'b':{attr('reset')}\n")
@@ -37,7 +37,7 @@ def back_to_menu():
 def instructions():
     '''This function allows the user to view the instructions for the game'''
 
-    clear_screen()
+    clear()
     print(instruction_logo)
     
     print(f"""
@@ -63,7 +63,7 @@ def instructions():
 def rules():
     '''This functions allows the user to view the house rules of the game'''
 
-    clear_screen()
+    clear()
     print(rules_logo)
     print("""
     The deck size is the original 52 cards including suits.
@@ -80,7 +80,7 @@ def rules():
 def history():
     '''This functions allows the user to view the history and score of games played, called from view_game_history() function'''
     
-    clear_screen()
+    clear()
     print(history_logo)
     view_game_history()
     print("\n")
@@ -89,6 +89,6 @@ def history():
 def wipe_history():
     '''This function allows the user to decide to wipe and delete the game history, called from the wipe_game_history() function'''
 
-    clear_screen()
+    clear()
     wipe_game_history()
     back_to_menu()

@@ -1,6 +1,6 @@
 ##### MAIN SECTION #####
 from colored import fg, attr
-from clear import clear_screen
+from clear import clear
 from art import main_logo, thanks_logo
 from calculate import calculate_score
 from player import player_turn, player_hand
@@ -44,16 +44,16 @@ def play_blackjack():
                         break
                     case 'b':
                         # Exits loop and function to go back to main menu
-                        clear_screen()
+                        clear()
                         break
                     case _:
-                        clear_screen()
+                        clear()
                         raise ValueError(f"{fg(9)}{attr(1)}\nInvalid Input! Please enter 'y' or 'b':{attr('reset')}\n")
             except ValueError as InvalidInput:
                 # Add invalid logo here?
                 print(InvalidInput)
                 input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
-                clear_screen()
+                clear()
     except KeyboardInterrupt:
         exit_game_to_menu()
 
@@ -61,7 +61,7 @@ def main_menu():
     '''This function serves as the main menu which introduces the user to the program and so the user can interact and navigate throughout the program'''
 
     try:
-        clear_screen()
+        clear()
         user_choice = ''
 
         while user_choice != '6':
@@ -90,17 +90,17 @@ def main_menu():
                         wipe_history()
                     case '6':
                         # Exits the program entirely
-                        clear_screen()
+                        clear()
                         print(thanks_logo)
                         break
                     case _:
-                        clear_screen()
+                        clear()
                         raise ValueError(f"{fg(196)}{attr(1)}Invalid Input! Please enter a numbered option from the menu (1-6):{attr('reset')}\n")
             except ValueError as InvalidInput:
                 # Add invalid logo here?
                 print("\n" + str(InvalidInput))
                 input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
-                clear_screen()
+                clear()
     except KeyboardInterrupt:
         exit_game()
 

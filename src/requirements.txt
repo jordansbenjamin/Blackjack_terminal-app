@@ -1,3 +1,4 @@
+clear==2.0.0
 colored==1.4.4
 iniconfig==2.0.0
 numpy==1.24.3
