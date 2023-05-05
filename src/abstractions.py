@@ -44,3 +44,7 @@ def exit_game():
     print(f"{fg(9)}{attr(1)}\nYou have stopped playing Blackjack. You will now exit the game.{attr('reset')}\n")
     input(f"{fg(2)}{attr(1)}Press Enter to exit...{attr('reset')}")
     clear()
+
+def enter_to_continue():
+    '''This function simply abstracts the enter continue input'''
+    input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")

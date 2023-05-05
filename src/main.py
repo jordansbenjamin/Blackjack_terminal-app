@@ -9,7 +9,7 @@ from cards import init_deck
 from winner import determine_winner
 from menu import menu, instructions, rules, history, wipe_history
 from history import create_csv_file, write_game_history
-from abstractions import init_deal, print_first_hand_and_score, clean_slate, exit_game_to_menu, exit_game
+from abstractions import *
 
 def play_blackjack():
     '''This functions serves as the main function body of the program that includes other parts, section and functions of the program. All combined together to serves as the main flow which runs to play the Blackjack program'''
@@ -52,7 +52,7 @@ def play_blackjack():
             except ValueError as InvalidInput:
                 # Add invalid logo here?
                 print(InvalidInput)
-                input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
+                enter_to_continue()
                 clear()
     except KeyboardInterrupt:
         exit_game_to_menu()
@@ -99,7 +99,7 @@ def main_menu():
             except ValueError as InvalidInput:
                 # Add invalid logo here?
                 print("\n" + str(InvalidInput))
-                input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
+                enter_to_continue()
                 clear()
     except KeyboardInterrupt:
         exit_game()

@@ -5,6 +5,7 @@ from colored import fg, attr
 from prettytable import PrettyTable
 from clear import clear
 from art import wipe_logo
+from abstractions import enter_to_continue
 
 game_history = 'game_history.csv'
 
@@ -91,7 +92,7 @@ def wipe_game_history():
         except ValueError as InvalidInput:
             print(InvalidInput)
             print("\n")
-            input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
+            enter_to_continue()
             clear()
             continue
     return
