@@ -7,15 +7,15 @@ from history import view_game_history, wipe_game_history
 def menu():
     '''The menu function displays all the list of menu items for the user to select from'''
 
-    print(f"{attr(1)}{fg(2)}1. Start playing Blackjack")
-    print(f"{attr(1)}{fg(12)}2. Read instructions")
-    print(f"{attr(1)}{fg(39)}3. View house rules")
-    print(f"{attr(1)}{fg(153)}4. Check game history")
+    print(f"{attr(1)}{fg(196)}1. Start playing Blackjack")
+    print(f"{attr(1)}{fg(27)}2. Read instructions")
+    print(f"{attr(1)}{fg(27)}3. View house rules")
+    print(f"{attr(1)}{fg(27)}4. Check game history")
     print(f"{attr(1)}{fg(3)}5. Wipe game history")
     print(f"{attr(1)}{fg(196)}6. Exit Blackjack{attr('reset')}\n")
 
     # Prompt user for their selection and return selection
-    choice = input(f"{fg(255)}Choose a numbered option from the menu: {attr('reset')}").strip(' ')
+    choice = input(f"{attr(1)}Choose a numbered option from the menu: {attr('reset')}").strip(' ')
     return choice
 
 def back_to_menu():
@@ -40,15 +40,22 @@ def instructions():
     clear_screen()
     print(instruction_logo)
     
-    print("""
+    print(f"""
     The premise of the game is simple, get as close to 21 as possible without going over.
-    As the player you will be dealt 2 cards, the dealer will also have 2 cards.
-    However, the dealer will only present one of its card.
+    As the player you will be dealt 2 cards, the dealer will only reveal and present 1 card.
     As the player, you can decide to 'hit' for another card or 'pass' to skip a turn.
     If you get a Natural Blackjack (An Ace and a picture card) you instantly win the game.
     If the dealer gets a Natural Blackjack, you instantly lose the game.
     The game will end if either the players or dealers final hand score is over 21.
     The game will end if either player or dealers final hand score is less than each others.
+    You are able to view the game history from the menu to see previous wins/losses.
+    You are also able to wipe the game history to start fresh if you wish!
+    
+    Most importantly have fun, since theres no money involved, no pressure! 😉
+
+    {attr(1)}{fg(9)}NOTE: You can quit the game at any time using the command ctrl + c. Depending on where
+          you are in the game, you will either be brought back to the main menu or the game
+          will quit.{attr('reset')}
     """)
 
     back_to_menu()

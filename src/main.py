@@ -35,7 +35,7 @@ def play_blackjack():
 
         while True:
             try:
-                play = input(f"Continue playing a game of Blackjack? Type {fg('green')}{attr('bold')}'y'{attr('reset')} to continue or {fg('red')}{attr('bold')}'b'{attr('reset')} to go back to main menu: ").lower().strip(' ')
+                play = input(f"Continue playing a game of Blackjack? Type {fg(2)}{attr('bold')}'y'{attr('reset')} to continue or {fg(196)}{attr('bold')}'b'{attr('reset')} to go back to main menu: ").lower().strip(' ')
                 
                 match play:
                     case 'y':
@@ -67,7 +67,7 @@ def main_menu():
         while user_choice != '6':
 
             print(main_logo)
-            print(f"{attr(1)}Welcome to {fg(9)}Blackjack ♠️{attr('reset')} Please choose from the following options:\n")
+            print(f"{attr(1)}Welcome to {fg(196)}Blackjack ♠️{attr('reset')}  {attr(1)}Please choose from the following options:{attr('reset')}\n")
             user_choice = menu()
 
             try:
@@ -95,7 +95,7 @@ def main_menu():
                         break
                     case _:
                         clear_screen()
-                        raise ValueError(f"{fg(9)}{attr(1)}Invalid Input! Please enter a numbered option from the menu (1-6):{attr('reset')}\n")
+                        raise ValueError(f"{fg(196)}{attr(1)}Invalid Input! Please enter a numbered option from the menu (1-6):{attr('reset')}\n")
             except ValueError as InvalidInput:
                 # Add invalid logo here?
                 print("\n" + str(InvalidInput))
