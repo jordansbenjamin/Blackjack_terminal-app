@@ -15,7 +15,7 @@ def create_csv_file():
         if not os.path.isfile(game_history):
             with open(game_history, 'a', newline='') as file:
                 writer = csv.writer(file)
-                writer.writerow(['Game', 'Player Hand', 'Player Score', 'Dealer Hand', 'Dealer Score', 'Result'])
+                writer.writerow(['Game', 'Player Hand', 'P. Score', 'Dealer Hand', 'D. Score', 'Result'])
     except FileNotFoundError:
         print("Game history file not Found.")
     except PermissionError:
@@ -58,7 +58,7 @@ def view_game_history():
                 table.add_row(row)
             print(table)
     except FileNotFoundError:
-        print("Game history file not found")
+        print("Game history file not found. Please re-start the game and play again to create a game history.")
 
 def wipe_game_history():
     '''This function allows the user to wipe out the game history from the CSV file for a fresh start'''
@@ -74,10 +74,12 @@ def wipe_game_history():
                     clear()
                     print(wipe_logo)
                     os.remove(game_history)
+                    if not os.path.isfile(game_history):
+                        create_csv_file()
                     print("The game history has been sucessfully wiped out.\n")
                     break
                 except FileNotFoundError:
-                    print("Error! Game history file not found.\n")
+                    print("Game history file not found. Please re-start the game and play again to create a game history.\n")
                     break
             elif choice.lower() == 'no':
                 clear()
