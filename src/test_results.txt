@@ -1,22 +1,63 @@
+I conducted as a trial test to make sure pytest is working its magic correctly, turns out I had to use the command (pytest -s) as it gave me this error (ERROR test_blackjack.py - OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.)
+
+NOTE: I decided to design tests for these functions as they have the higher chance of values getting mixed easily, especially when it comes to calculation of scores and determining the winner based on their score. There are so many possibiltiies and variables for winning and losing conditions. And turns out I was right, because of these tests I was actually able to find bugs and fixed them. Who knew testing can be so helpful!
+
 TEST 1
+INITIALISING DECK FUNCTION
+
+RESULT: FAIL ❌
+
+======================================================== test session starts ========================================================
+platform darwin -- Python 3.11.3, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+collected 1 item                                                                                                                    
+
+test_blackjack.py F
+
+============================================================= FAILURES ==============================================================
+__________________________________________________________ test_init_deck ___________________________________________________________
+
+deck_fixture = ['♦A', '♥A', '♠A', '♣A', '♦2', '♥2', ...]
+
+    def test_init_deck(deck_fixture):
+>       assert len(deck_fixture) == 52
+E       AssertionError: assert 48 == 52
+E        +  where 48 = len(['♦A', '♥A', '♠A', '♣A', '♦2', '♥2', ...])
+
+test_blackjack.py:19: AssertionError
+====================================================== short test summary info ======================================================
+FAILED test_blackjack.py::test_init_deck - AssertionError: assert 48 == 52
+========================================================= 1 failed in 0.08s =========================================================
+
+TEST 1 BUG FIXED
+INITIALISING DECK FUNCTION
+
+RESULT: PASS ✅
+
+======================================================== test session starts ========================================================
+platform darwin -- Python 3.11.3, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+collected 1 item                                                                                                                    
+
+test_blackjack.py .
+
+========================================================= 1 passed in 0.06s =========================================================
+
+TEST 2
 CALCULATE SCORE FUNCTION TESTS
 
 RESULT: PASS ✅
 
-NOTE: This test was conducted as a trial test to make sure pytest is working its magic correctly, turns out I had to use the command (pytest -s) as it gave me this error (ERROR test_blackjack.py - OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.)
-
-============================================================ test session starts =============================================================
-platform darwin -- Python 3.11.2, pytest-7.3.1, pluggy-1.0.0
+======================================================== test session starts ========================================================
+platform darwin -- Python 3.11.3, pytest-7.3.1, pluggy-1.0.0
 rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
-collecting ... 
+collected 2 items                                                                                                                   
 
-collected 1 item                                                                                                                             
+test_blackjack.py ..
 
-test_blackjack.py .
+========================================================= 2 passed in 0.06s =========================================================
 
-============================================================= 1 passed in 4.76s ==============================================================
-
-TEST 1 BUG FOUND
+TEST 2 BUG FOUND
 CALCULATE SCORE FUNCTION TESTS
 
 RESULT: FAIL ❌
@@ -43,7 +84,7 @@ test_blackjack.py:44: AssertionError
 FAILED test_blackjack.py::test_calculate_score - AssertionError: assert 11 == 21
 ======================================================== 1 failed, 1 passed in 6.59s =========================================================
 
-TEST 1 BUG FIXED
+TEST 2 BUG FIXED
 CALCULATE SCORE FUNCTION TESTS
 
 RESULT: PASS ✅
@@ -62,7 +103,7 @@ test_blackjack.py ..
 
 ============================================================= 2 passed in 5.26s ==============================================================
 
-TEST 1 BUG FOUND PART 2
+TEST 2 BUG FOUND PART 2
 CALCULATE SCORE FUNCTION TESTS
 
 RESULT: FAIL ❌
@@ -86,7 +127,7 @@ test_blackjack.py:62: AssertionError
 FAILED test_blackjack.py::test_calculate_score - AssertionError: assert 22 == 12
 ================================================== 1 failed, 3 passed in 0.10s ==================================================
 
-TEST 1 BUG PART 2 FIXED
+TEST 2 BUG PART 2 FIXED
 CALCULATE SCORE FUNCTION TESTS
 
 RESULT: PASS ✅
@@ -100,7 +141,7 @@ test_blackjack.py ....
 
 ========================================================= 4 passed in 0.06s =========================================================
 
-TEST 2
+TEST 3
 DETERMINE WINNER FUNCTION TESTS
 
 RESULT: PASS ✅
@@ -131,7 +172,20 @@ test_blackjack.py ..
 
 ================================================================= 2 passed in 0.05s =================================================================
 
-TEST 3
+TEST 4
+WRITE GAME HISTORY FUNCTION
+RESULT: PASS ✅
+
+======================================================== test session starts ========================================================
+platform darwin -- Python 3.11.3, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+collected 4 items                                                                                                                   
+
+test_blackjack.py ....
+
+========================================================= 4 passed in 0.06s =========================================================
+
+TEST 5
 WIPE GAME HISTORY FUNCTION USING MONKEYPATCH
 RESULT: PASS ✅
 
@@ -154,3 +208,16 @@ collected 5 items
 test_blackjack.py .....
 
 ============================================================ 5 passed in 0.06s =============================================================
+
+FINAL TEST RUN FOR ALL TESTS
+RESULT: PASS ✅
+
+
+======================================================== test session starts ========================================================
+platform darwin -- Python 3.11.3, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+collected 6 items                                                                                                                   
+
+test_blackjack.py ......
+
+========================================================= 6 passed in 0.06s =========================================================

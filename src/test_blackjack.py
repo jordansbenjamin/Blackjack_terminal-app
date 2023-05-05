@@ -1,5 +1,6 @@
 ##### TESTING #####
-from pytest import *
+import pytest
+import numpy as np
 from main import *
 from player import *
 from dealer import *
@@ -10,10 +11,25 @@ from history import *
 # NOTE: Running tests works with the command(pytest -s)
 
 ### TEST 1 ###
+# INITIALISE DECK FUNCTION TEST SUITE
+@pytest.fixture
+# Deck sample to test using pytest fixture
+def deck_fixture():
+    sample_deck = ['♦A', '♥A', '♠A', '♣A', '♦2', '♥2', '♠2', '♣2', '♦3', '♥3', '♠3', '♣3', '♦4', '♥4', '♠4', '♣4', '♦5', '♥5', '♠5', '♣5', '♦6', '♥6', '♠6', '♣6', '♦7', '♥7', '♠7', '♣7', '♦8', '♥8', '♠8', '♣8', '♦9', '♥9', '♠9', '♣9', '♦10', '♥10', '♠10', '♣10', '♦J', '♥J', '♠J', '♣J', '♦Q', '♥Q', '♠Q', '♣Q', '♦K', '♥K', '♠K', '♣K']
+    return sample_deck
+
+def test_init_deck(deck_fixture):
+    '''This test case checks if the init_deck() function initialises the proper deck amount based on the sample deck'''
+    # Expected result: pass
+    assert len(deck_fixture) == 52
+    # Original Result: Failed ❌
+    # Refactored code & bug fixed Result: Pass ✅
+
+### TEST 2 ###
 # CALCULATE SCORE FUNCTION TEST SUITE
 """This test will assert if the function for calculating the score from the list of cards adds up correctly and returns the correct sum"""
 def test_calculate_score():
-    # TEST CASE 1: Test player with a hand of two cards and test the return of the sum
+    '''TEST CASE 1: Test player with a hand of two cards and test the return of the sum'''
     player_hand = ['♦2', '♠8']
     # Expected score
     expected_player_score = 10
@@ -96,7 +112,7 @@ def test_calculate_score():
     # Refactored code & bug fixed Result: Pass ✅
     
 
-### TEST 2 ###
+### TEST 3 ###
 # DETERMINE WINNER FUNCTION TEST SUITE
 """This test will assert the correct expected outcome of various winning conditions of the game for both the player and dealer based on the score they have and returns the outcome (win/lose)"""
 def test_determine_winner():
@@ -181,7 +197,35 @@ def test_determine_winner():
         assert determine_winner(player_hand, dealer_hand) == expected_output
     # Result: Pass ✅
 
-### TEST 3 ###
+### TEST 4 ###
+# WRITE GAME HISTORY FUNCTION TEST
+"""This test suit checks if the write_game_history function works as expected by writing sample values and asserts that its written in the CSV file"""
+def test_write_game_history(tmp_path):
+    # Create a temporary CSV file for testing
+    game_history_file = tmp_path / "game_history.csv"
+    game_history_file.touch()
+
+    # Test values for writing to CSV for testing write_game_history(function)
+    player_hand = ["♠A", "♥J"]
+    player_score = 21
+    dealer_hand = ["♣9", "♦7"]
+    dealer_score = 16
+    winner = "You won with a Blackjack! 😎"
+    # Called the function to write the test value above
+    write_game_history(player_hand, player_score, dealer_hand, dealer_score, winner)
+
+    # Check if the file contains the expected values that is written from the function call
+    with open(game_history) as file:
+        reader = csv.reader(file)
+        row_count = sum(1 for row in reader)
+        assert row_count == 2
+        file.seek(0)
+        row = next(reader)
+        # Expected result: Pass
+        assert row == ["1", str(player_hand), str(player_score), str(dealer_hand), str(dealer_score), winner]
+        # Result: Pass ✅
+
+### TEST 5 ###
 '''This test suite checks for different cases and output results based on the users input when wiping the game history file, it's an important test suite because it validates the outcome of CSV file deletion'''
 # TEST CASE 1 (User enters 'yes')
 def test_wipe_game_history_yes(monkeypatch, capsys):
