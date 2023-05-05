@@ -4,7 +4,7 @@ check_python(){
     if ! [[ -x "$(command -v python3)" ]]; then
         echo "Error: 
             To play Blackjack, Python 3 is required and it looks like you don't have it installed.
-            Please install Python 3, you can do so by checking out: https://realpython.com/installing-python/" >&2
+            Please install the latest version of Python 3, you can do so by checking out: https://www.python.org/downloads/installing-python/" >&2
         exit 1
     fi
 }
@@ -32,27 +32,31 @@ install_requirements(){
 # Main execution of bash script
 echo "Welcome! Let's get you setup to play Blackjack!"
 
+sleep 2
+
+clear
+
 check_python
 
 create_virtual_venv blackjack-venv
-echo "Virtual environment created!"
-
-sleep 1
 
 activate_virtual_venv blackjack-venv
-echo "Virtual environment activated!"
+echo "Virtual environment created and activated!"
 
-sleep 1
+sleep 2
 
 upgrade_pip
 
 clear
 
 install_requirements requirements.txt
-echo "Requirements installed!"
-
-sleep 1
 
 clear
 
-echo "Setup complete! Virtual environment initialised, dependencies installed, to start playing Blackjack, run: ./run_bj.sh"
+echo "Requirements and dependencies installed!"
+
+sleep 2
+
+clear
+
+echo "Setup complete! Virtual environment initialised, dependencies installed, to start playing Blackjack, run: ./run_blackjack.sh"
