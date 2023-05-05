@@ -12,6 +12,8 @@ If you don't have Python 3 already installed, please follow visit this [*website
 
 Please make sure have **Python 3.11+** version installed.
 
+Add python version here
+
 #### Installation steps (Mac)
 
 1. Open the Mac dedicated terminal by opening **spotlight** with the command:
@@ -20,15 +22,16 @@ Please make sure have **Python 3.11+** version installed.
 - Go to the top of menu and look for the **magnifying glass** symbol and click on it.
 - Simply type in **'*terminal*'**
 
-2. Once terminal is open, decide where you want the application folder downloaded (like your Desktop for example) like so:
+2. Once terminal is open, decide where you want the application folder downloaded (like your Desktop or downloads folder for example) like so:
 ```
 cd User/Desktop
+cd User/Downloads
 ```
 
 
 3. Next, you need to clone the [Github Repo](https://github.com/jordansbenjamin/Blackjack_terminal-app), simply copy and paste this command to your terminal:
 ```
-git clone git@github.com:jordansbenjamin/Blackjack_terminal-app.git
+git clone https://github.com/jordansbenjamin/Blackjack_terminal-app.git
 ```
 
 4. Next, you need to go to the **src** folder location, type this command on the terminal:
