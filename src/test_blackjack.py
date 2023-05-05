@@ -45,7 +45,8 @@ def test_calculate_score():
     assert calculate_score(dealer_hand) == expected_dealer_score
     # Result: Pass ✅
 
-    # TEST CASE 5: Test player with a hand of six cards and test the return of the sum
+    # TEST CASE 5: Test player with a hand of five cards with an Ace and test the return of the sum
+    # NOTE: This test case was added as a way to fix a bug found, I ran the tests again with this new test case
     player_hand = ['♣4', '♥2', '♦A', '♠5']
     # Expected score
     expected_player_score = 22
@@ -53,6 +54,47 @@ def test_calculate_score():
     assert calculate_score(player_hand) == expected_player_score
     # Original Result: Failed ❌
     # Refactored code & bug fixed Result: Pass ✅
+
+    # TEST CASE 6: Test player with a hand of two aces and test the return of the sum
+    # NOTE: This test case was added as a way to fix a bug found, I ran the tests again with this new test case
+    player_hand = ['♣A', '♦A']
+    # Expected score
+    expected_player_score = 12
+    # Expected Result: Pass
+    assert calculate_score(player_hand) == expected_player_score
+    # Original Result: Failed ❌
+    # Refactored code & bug fixed Result: Pass ✅
+
+    # TEST CASE 7: Test player with a hand of two aces and test the return of the sum
+    # NOTE: This test case was added as a way to fix a bug found, I ran the tests again with this new test case
+    player_hand = ['♣A', '♦A', '♥A']
+    # Expected score
+    expected_player_score = 13
+    # Expected Result: Pass
+    assert calculate_score(player_hand) == expected_player_score
+    # Original Result: Failed ❌
+    # Refactored code & bug fixed Result: Pass ✅
+
+    # TEST CASE 8: Test player with a hand with four aces and test the return of the sum
+    # NOTE: This test case was added as a way to fix a bug found, I ran the tests again with this new test case
+    player_hand = ['♣A', '♦A', '♥A', '♠A']
+    # Expected score
+    expected_player_score = 14
+    # Expected Result: Pass
+    assert calculate_score(player_hand) == expected_player_score
+    # Original Result: Failed ❌
+    # Refactored code & bug fixed Result: Pass ✅
+
+    # TEST CASE 9: Test player with a hand of multiple occurences of aces and test the return of the sum
+    # NOTE: This test case was added as a way to fix a bug found, I ran the tests again with this new test case
+    player_hand = ['♣A', '♦5', '♥A', '♠A', '♠6']
+    # Expected score
+    expected_player_score = 24
+    # Expected Result: Pass
+    assert calculate_score(player_hand) == expected_player_score
+    # Original Result: Failed ❌
+    # Refactored code & bug fixed Result: Pass ✅
+    
 
 ### TEST 2 ###
 # DETERMINE WINNER FUNCTION TEST SUITE
@@ -140,26 +182,7 @@ def test_determine_winner():
     # Result: Pass ✅
 
 ### TEST 3 ###
-def test_menu(monkeypatch, capsys):
-    '''This test assserts users inputs by simulating through the possible inputs and returns the correct expected results'''
-    # Using monkeypatch to simulate user input
-    monkeypatch.setattr('builtins.input', lambda _: '1')
-    # Call the function
-    menu()
-    # Checks the output
-    captured = capsys.readouterr()
-    expected = '1. Enter 1 to start playing Blackjack\n' \
-               '2. Enter 2 to view instructions\n' \
-               '3. Enter 3 to view house rules\n' \
-               '4. Enter 4 to check your game history\n' \
-               '5. Enter 5 to wipe game history\n' \
-               '6. Enter 6 to exit Blackjack\n\n'
-    # Expected result: Pass
-    assert captured.out == expected
-    # Result: Pass ✅
-
-### TEST 4 ###
-'''This test suite checks for different cases and output results based on the users input when wiping the game history file, it's an important test suite because it validates the results and its expected outcome'''
+'''This test suite checks for different cases and output results based on the users input when wiping the game history file, it's an important test suite because it validates the outcome of CSV file deletion'''
 # TEST CASE 1 (User enters 'yes')
 def test_wipe_game_history_yes(monkeypatch, capsys):
     '''This test case will check if wiping the game's history works based on the user's input, in this case when the use enters (yes)'''

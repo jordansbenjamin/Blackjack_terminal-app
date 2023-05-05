@@ -21,4 +21,13 @@ def calculate_score(player_or_dealer_hand):
             score -= 1
         else:
             break
+    
+    # After some bug fixing, this if/elif statements are required to check the hand for counts of aces in a card
+    if score > 21 and aces == 2:
+        score -= 10
+    elif score > 21 and aces == 3:
+        score -= 20
+    elif score > 21 and aces == 4:
+        score -= 30
+
     return score

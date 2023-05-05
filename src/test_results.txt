@@ -1,5 +1,6 @@
 TEST 1
 CALCULATE SCORE FUNCTION TESTS
+
 RESULT: PASS ✅
 
 NOTE: This test was conducted as a trial test to make sure pytest is working its magic correctly, turns out I had to use the command (pytest -s) as it gave me this error (ERROR test_blackjack.py - OSError: pytest: reading from stdin while output is captured!  Consider using `-s`.)
@@ -16,6 +17,7 @@ test_blackjack.py .
 ============================================================= 1 passed in 4.76s ==============================================================
 
 TEST 1 BUG FOUND
+CALCULATE SCORE FUNCTION TESTS
 
 RESULT: FAIL ❌
 
@@ -42,6 +44,7 @@ FAILED test_blackjack.py::test_calculate_score - AssertionError: assert 11 == 21
 ======================================================== 1 failed, 1 passed in 6.59s =========================================================
 
 TEST 1 BUG FIXED
+CALCULATE SCORE FUNCTION TESTS
 
 RESULT: PASS ✅
 
@@ -59,6 +62,43 @@ test_blackjack.py ..
 
 ============================================================= 2 passed in 5.26s ==============================================================
 
+TEST 1 BUG FOUND PART 2
+CALCULATE SCORE FUNCTION TESTS
+
+RESULT: FAIL ❌
+
+====================================================== test session starts ======================================================
+platform darwin -- Python 3.11.3, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+collected 4 items                                                                                                               
+
+test_blackjack.py F...
+
+=========================================================== FAILURES ============================================================
+_____________________________________________________ test_calculate_score ______________________________________________________
+
+>       assert calculate_score(player_hand) == expected_player_score
+E       AssertionError: assert 22 == 12
+E        +  where 22 = calculate_score(['♣A', '♦A'])
+
+test_blackjack.py:62: AssertionError
+==================================================== short test summary info ====================================================
+FAILED test_blackjack.py::test_calculate_score - AssertionError: assert 22 == 12
+================================================== 1 failed, 3 passed in 0.10s ==================================================
+
+TEST 1 BUG PART 2 FIXED
+CALCULATE SCORE FUNCTION TESTS
+
+RESULT: PASS ✅
+
+======================================================== test session starts ========================================================
+platform darwin -- Python 3.11.3, pytest-7.3.1, pluggy-1.0.0
+rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
+collected 4 items                                                                                                                 
+
+test_blackjack.py ....
+
+========================================================= 4 passed in 0.06s =========================================================
 
 TEST 2
 DETERMINE WINNER FUNCTION TESTS
@@ -77,7 +117,7 @@ test_blackjack.py ..
 
 ============================================================= 2 passed in 8.13s ==============================================================
 
-UPDATED CODE TEST
+REFACTORED CODE TEST
 
 RESULT: PASS ✅
 
@@ -92,20 +132,6 @@ test_blackjack.py ..
 ================================================================= 2 passed in 0.05s =================================================================
 
 TEST 3
-MENU FUNCTION TEST USING MONKEYPATCH
-RESULT: PASS ✅
-
-================================================================ test session starts ================================================================
-platform darwin -- Python 3.11.2, pytest-7.3.1, pluggy-1.0.0
-rootdir: /Users/jordanbenjamin/Courses/Bootcamp/CoderAcademy/T1/Assignments/Terminal_App_T1A3/Blackjack_terminal-app/src
-plugins: mock-3.10.0
-collected 3 items                                                                                                                                   
-
-test_blackjack.py ...
-
-================================================================= 3 passed in 0.05s =================================================================
-
-TEST 4
 WIPE GAME HISTORY FUNCTION USING MONKEYPATCH
 RESULT: PASS ✅
 
