@@ -1,5 +1,4 @@
 # Blackjack Python Terminal App
----
 ## Links
 #### [GitHub Repo](https://github.com/jordansbenjamin/Blackjack_terminal-app)
 #### [Presentation]()
