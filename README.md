@@ -82,8 +82,9 @@ chmod +x run_blackjack.sh
 #### Dependencies
 
 The requirements to start the Blackjack program have the following dependencies, all automatically installed into the virtual envrionment when you follow the steps above:
-```
 
+```
+clear==2.0.0
 colored==1.4.4
 iniconfig==2.0.0
 numpy==1.24.3
@@ -145,7 +146,11 @@ The player will be given the option to go back to the main menu after finishing 
 ---
 ## Code Styling
 
-Pep 8
+The Blackjack game was created using Python3, and creating it I followed the conventions and guidelines set by Guido van Rossum, Barry Warsaw and Nick Coghlan with their [PEP 8 - Style Guide For Python Code](https://peps.python.org/pep-0008/).
+
+Code layout conventions such as using 4 spaces of indentation, the consistency of tabs over spaces for indentation. The use of block comments and the use of whitespace in expressions and statements.
+
+Most importantly out of all, the use of descriptive variable and functions names, adding to that I also only used 2 global variables, which follows the convention of having minimal/no global variables.
 
 ---
 ## References
