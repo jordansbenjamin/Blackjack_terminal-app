@@ -81,7 +81,7 @@ def test_calculate_score():
     # Original Result: Failed ❌
     # Refactored code & bug fixed Result: Pass ✅
 
-    # TEST CASE 7: Test player with a hand of two aces and test the return of the sum
+    # TEST CASE 7: Test player with a hand of three aces and test the return of the sum
     # NOTE: This test case was added as a way to fix a bug found, I ran the tests again with this new test case
     player_hand = ['♣A', '♦A', '♥A']
     # Expected score

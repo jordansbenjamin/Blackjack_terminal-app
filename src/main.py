@@ -50,7 +50,6 @@ def play_blackjack():
                         clear()
                         raise ValueError(f"{fg(9)}{attr(1)}\nInvalid Input! Please enter 'y' or 'b':{attr('reset')}\n")
             except ValueError as InvalidInput:
-                # Add invalid logo here?
                 print(InvalidInput)
                 enter_to_continue()
                 clear()
@@ -97,7 +96,6 @@ def main_menu():
                         clear()
                         raise ValueError(f"{fg(196)}{attr(1)}Invalid Input! Please enter a numbered option from the menu (1-6):{attr('reset')}\n")
             except ValueError as InvalidInput:
-                # Add invalid logo here?
                 print("\n" + str(InvalidInput))
                 enter_to_continue()
                 clear()
