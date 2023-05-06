@@ -31,41 +31,53 @@ Blackjack fun right on the terminal, the premise is simple, try and get to 21 as
 
 ### System Requirements
 
-To play Blackjack, since its a terminal application built on Python. It is a requirement that **Python 3** is installed on your computer.
+To play the Blackjack program, since its a terminal application built on Python. It is a requirement that **Python 3** is installed on your computer.
 
-If you don't have Python 3 already installed, please follow visit this [*website*](https://realpython.com/installing-python/) for steps on installing Python 3 to your device of choice.
+If you don't have Python 3 already installed, please follow visit this [*website*](https://realpython.com/installing-python/) for steps on installing Python 3 to your device and operating system of choice.
 
 Please make sure have **Python 3.11+** version installed.
 
-Add python version here
+Operating System requirements to run Python:
 
-#### Installation steps
+- Windows 7,10 or 11
+- Mac OS X 10.11 or higher, 64-bit
+- Linux: RHEL 6/7, 64-bit (almost all libraries also work in Ubuntu)
+    - x86 64-bit CPU (Intel / AMD architecture)
+    - 4 GB RAM
+    - 5 GB free disk space
 
-1. Depending on your operating systems, there are different way to start the installation process:
+
+You can check which version of python is installed or if you have it installed at all by doing:
+
+### Opening Terminal
+
+1. Depending on your operating systems, there are different way to open the terminal:
 
 - For Macintosh `CMD + space` to open spotlight, then simply type in ***terminal***
 - For Windows `Windows key + x` then select ***command prompt***
 
-2. Once terminal is open, decide where you want the application folder downloaded (like your Desktop or downloads folder for example) like so:
+### Installation steps
+
+1. Once terminal is open, decide where you want the application folder downloaded (like your Desktop or downloads folder for example) like so:
 
 ```shell
 cd User/Desktop
 cd User/Downloads
 ```
 
-3. Next, you need to clone the [Github Repo](https://github.com/jordansbenjamin/Blackjack_terminal-app), simply copy and paste this command to your terminal:
+2. Next, you need to clone the [Github Repo](https://github.com/jordansbenjamin/Blackjack_terminal-app), simply copy and paste this command to your terminal:
 
 ```sehll
 git clone https://github.com/jordansbenjamin/Blackjack_terminal-app.git
 ```
 
-4. Next, you need to go to the **src** folder location, type this command on the terminal:
+3. Next, you need to go to the **src** folder location, type this command on the terminal:
 
 ```shell
 cd Blackjack_terminal-app/src
 ```
 
-5. After that, type these two commands separately to allow permission for executing the Blackjack program:
+4. After that, type these two commands separately to allow permission for executing the Blackjack program:
 
 ```shell
 chmod +x setup_blackjack.sh
@@ -75,19 +87,21 @@ chmod +x setup_blackjack.sh
 chmod +x run_blackjack.sh
 ```
 
-6. To get you set up before running the Blackjack game program, you need to install some requirements and dependencies:
+5. To get you set up before running the Blackjack game program, you need to install some requirements and dependencies:
 
 ```shell
 ./setup_blackjack.sh
 ```
 
-7. After all the necessary requirements are installed, you can now run the program:
+6. After all the necessary requirements are installed, you can now run the program:
 
 ```shell
 ./run_blackjack.sh
 ```
 
-8. Enjoy the game! It's important to note when you quit the game, all you need to do to play again is to run the game with the command above. As a reminder: `./run_blackjack.sh`
+Add a note here that for the best possible experience, the terminal window needs to be larger than usual.
+
+7. Enjoy the game! It's important to note when you quit the game, all you need to do to play again is to run the game with the command above. As a reminder: `./run_blackjack.sh`
 
 #### Dependencies
 
@@ -178,7 +192,7 @@ This is again important, as it simulates real life Blackjack rules with the exce
 - Count Ace as an 11.
 - Count Ace as 1.
 
-The deck of cards itself is important, as it deals with the logic of initialising a deck of 52 cards with its respective suits. The deck will be shuffled before the start of every game to maximise the randomness of a game like Blackjack.
+The deck of cards itself is important, as it deals with the logic of initialising a deck of 52 cards with its respective suits. Using a nested for loop to achieve the pairing of the card and the suit. The deck will be shuffled before the start of every game to maximise the randomness of a game like Blackjack.
 
 More importantly, the logic that involves how a card is drawn from the deck is as important. Where in each of the players and dealers turn they decide if they want to draw another card, if so, then the card is added to their hand and removed from the deck.
 
@@ -203,17 +217,11 @@ Other internal features of the game history feature includes:
     - Permission error.
 - When wiping the games history a new one is automatically created for convenience.
 
-#### Other features and functionality
-
-Add this?
-
-There are other smaller pieces that makes up the program as a whole
-
 ---
 
 ## Implementation plan
 
-#### Planning
+### Planning
 
 To create and design this application, I decided to take roughly just under 1 week as a deadline I set for myself to include all the planning and research that needs to be done for the application. I thought it was important to have this much time with planning and preparation to really flesh out the application before any implementation begins.
 
@@ -221,11 +229,11 @@ For this project, I decided to use Trello for project management which helps me 
 
 Here is a screenshot of some tasks I laid for the planning phase of the project I added on Trello:
 
-#### Algorithmic thinking
+### Algorithmic thinking
 
 I broke down the programs main requirements into smaller steps to better understand the logic of the game which helps a lot, especially when creating a flowchart which comes up next.
 
-##### Program requirements
+#### Program requirements
 
 1. The user will recieve a starting hand of 2 random cards, but the dealer only gets dealt 1 card as only 1 is revealed.
 
@@ -261,13 +269,41 @@ I broke down the programs main requirements into smaller steps to better underst
 
 I created a flowchart
 
-#### Keeping track of the process using Trello
+### Keeping track of the process using Trello
 
 Trello helped me managed the development process from the planning phase, to testing, development to later polish and make changes to the codebase and all the way creating bash scripts and documentation.
 
 One important takeaway, is that my trello board changed as I added and removed different checklists or due dates, and even changing some parts or features of the application.
 
 So its never set in concrete, and thats great because it shows the process development process is not linear and theres room for flexibility. So unknowingly I applied Agile methodologies during this project.
+
+During development, I decided to ***prioritise*** the following:
+
+- The main features of the game which includes:
+    - The deck and cards logic
+    - Logic for calculating score
+    - Logic for determining winner/loser
+    - Logic behind players turn and how they interact with the game
+    - Logic behind dealers turn
+
+NOTE: Unit tests in between this.
+
+- Organise and modularise each part to create a cohesive program, so I created a main function which involves the main flow of the game. This involves recursively calling the function when a user wants to go for another round.
+
+- The main menu feature is next and its great because it actually interacts with the main function which handles all the modules and parts to play the game cohesively. The main menu includes:
+    - Option to start the game
+    - View instructions
+    - Read house rules
+    - View game history
+    - Delete game history
+    - Option to quit the game
+
+- Prioritise cleaning the codebase, removing any DRY code and adding docstrings. Organising helps a lot as it helped me navigate through the codebase better.
+
+- I continued with the file handling section of the program where it involves the writing and recording of the games history.
+    - I also included an option where the user can wipe the game history if they want to.
+
+- Lastly, for the program scanning the entire codebase to make sure there are no more bugs or typos, etc. Also creating bash scripts for execution and documentation.
 
 Again for convenience, please find the [Trello Board here](https://trello.com/b/In1uFmIe/terminal-application-t1a3).
 
@@ -277,7 +313,7 @@ These are screenshots of different cards and sections of my trello board:
 
 ## Testing
 
-For this application I designed a total of six total test for this application, some I designed early on to implement TDD and some I created during the development process when testing and adding new features.
+For this application I designed a total of six tests for this application, some I designed early on to implement TDD and some I created during the development process when testing and adding new features. I used the pytest framework for testing this app.
 
 But most importantly, what I got out of testing was that it helped me discover and fix bugs in the program. Because of the tests I designed, I was able to create new test cases and find that it fails, so I had to refactor my code for the test to pass again. I never thought it would be this helpful.
 
@@ -285,14 +321,19 @@ The tests I designed was to test the outcome of certain functions that had a cha
 
 The tests I designed are:
 
-1. **Initialising deck function test suite**
+### Test 1
+
+1. Initialising deck function test suite
 
 This test was created to test that the function which initialises the deck of 52 cards sums up correctly, and that it pairs each of the 4 suits to the cards correctly.
+
 - I used a sample deck of cards to assert this function to and turns out I failed the test.
 - I found that I was actually missing the card 9 in the cards dictionary!
 - So I made those changes and the test passed!
 
-2. **Calculate score function test suite**
+### Test 2
+
+2. Calculate score function test suite
 
 This test was designed to check the outcome of the calculate score function, which calculates the score of each cards values and the amount based on either the players or dealers hand.
 
@@ -304,7 +345,50 @@ This was a big and important test as there are many different variabilities and 
 
 The errors and bug I found involved the logic that determines the score of an Ace in a card.
 
-For example, when theres 1 Ace in the card
+For example, when theres an Ace in a hand, the Ace counts as a score of 11. However, when if the score goes over 21 and theres more than one Ace, the consecutive Ace/s counts as a score of 1.
+
+I created new test cases to help me find different instances of Aces in a hand, and this helped me fix the bug!
+
+### Test 3
+
+3. Determine winner function test suite
+
+This is another important test where it asserts the correct outcome of various winning conditions of the game for both the player and dealer based on their scores.
+
+- The test includes 8 test cases which checks conditions of various player and dealers hand with the expected output (winning/losing) condition.
+- It asserts the sample hands with the determine winner function
+
+Luckily, the test passed as expected with no complications.
+
+### Test 4
+
+4. Write game history function test suite
+
+This test suite checks if the function works as expected by writing sample values and asserts that its written in the CSV file which records the games history.
+
+This is an important test suite as it checks that the program is able to handle files correctly and writes it into the CSV.
+
+- A sample test value of the players hand, players score, dealers hand, dealers score and the winning/losing results is used.
+- It also tests if it writes the count of games played into the CSV.
+
+Thankfully, this test suite passed with no complications.
+
+### Test 5
+
+5. Wipe game history function test suite
+
+This test suit checks for different cases and output results based on the users input when wiping the game history file, it's an important test suite because it validates the outcome of CSV file deletion.
+
+- First time using monkeypatch to simulate the users decision.
+- The test asserts the expected output message when a file deletion or cancellation is successful.
+
+This test suit is really 2 different tests but I included them as one because they are relevant to each other.
+
+This test passed as expected!
+
+#### TEST RESULTS:
+
+Have a look at the results of all the tests I've done for this program [here.](https://github.com/jordansbenjamin/Blackjack_terminal-app/blob/main/src/test_results.txt)
 
 ---
 
@@ -319,4 +403,28 @@ Most importantly out of all, the use of descriptive variable and functions names
 Adding to that I also only used 2 global variables, which follows the convention of having minimal/no global variables. Lastly, I group all my imports at the top of the page.
 
 ---
+
+## Frameworks and Packages
+
+A list of frameworks and packages used for the Blackjack program:
+
+- pytest
+- numpy
+- colored
+- prettytable
+- clear
+- os
+
+---
+
 ## References
+
+Monkeypatch (Stackoverflow): [How to test a function with input call.](https://stackoverflow.com/questions/35851323/how-to-test-a-function-with-input-call/36377194#36377194)
+
+ASCII art: [Generator](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) and [library.](https://ascii.co.uk/art)
+
+Python system: [Requirements](https://burakboga.com/en/python-system-requirements/)
+
+Python version 3.11+: [Download](https://www.python.org/downloads/installing-python/)
+
+Steps to download: [Python](https://realpython.com/installing-python/)

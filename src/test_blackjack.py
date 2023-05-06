@@ -226,6 +226,7 @@ def test_write_game_history(tmp_path):
         # Result: Pass ✅
 
 ### TEST 5 ###
+# WIPE GAME HISTORY FUNCTION TEST
 '''This test suite checks for different cases and output results based on the users input when wiping the game history file, it's an important test suite because it validates the outcome of CSV file deletion'''
 # TEST CASE 1 (User enters 'yes')
 def test_wipe_game_history_yes(monkeypatch, capsys):

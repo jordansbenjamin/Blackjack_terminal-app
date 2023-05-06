@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Check python version and existence
 check_python(){
     if ! [[ -x "$(command -v python3)" ]]; then
         echo "Error: 
