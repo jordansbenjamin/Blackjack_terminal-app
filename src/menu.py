@@ -41,15 +41,15 @@ def instructions():
     print(instruction_logo)
     
     print(f"""
-    The premise of the game is simple, get as close to 21 as possible without going over.
-    As the player you will be dealt 2 cards, the dealer will only reveal and present 1 card.
-    As the player, you can decide to 'hit' for another card or 'pass' to skip a turn.
-    If you get a Natural Blackjack (An Ace and a picture card) you instantly win the game.
-    If the dealer gets a Natural Blackjack, you instantly lose the game.
-    The game will end if either the players or dealers final hand score is over 21.
-    The game will end if either player or dealers final hand score is less than each others.
-    You are able to view the game history from the menu to see previous wins/losses.
-    You are also able to wipe the game history to start fresh if you wish!
+    1. The premise of the game is simple, get as close to 21 as possible without going over.
+    2. As the player you will be dealt 2 cards, the dealer will only reveal and present 1 card.
+    3. As the player, you can decide to 'hit' for another card or 'pass' to skip a turn.
+    4. If you get a Natural Blackjack (An Ace and a picture card) you instantly win the game.
+    5. If the dealer gets a Natural Blackjack, you instantly lose the game.
+    6. The game will end if either the players or dealers final hand score is over 21.
+    7. The game will end if either player or dealers final hand score is less than each others.
+    8. You are able to view the game history from the menu to see previous wins/losses.
+    9. You are also able to wipe the game history to start fresh if you wish!
     
     Most importantly have fun, since theres no money involved, no pressure! 😉
 

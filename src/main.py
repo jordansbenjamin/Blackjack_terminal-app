@@ -12,7 +12,7 @@ from history import create_csv_file, write_game_history
 from abstractions import *
 
 def play_blackjack():
-    '''This functions serves as the main function body of the program that includes other parts, section and functions of the program. All combined together to serves as the main flow which runs to play the Blackjack program'''
+    '''This functions serves as the main function body of the program that includes other parts of the program. All combined together to serves as the main flow which runs to play the Blackjack program'''
     
     try:
         # Starts the game on a clean slate, clearing the player and dealers hand and clears screen
@@ -28,7 +28,7 @@ def play_blackjack():
         dealer_turn()
         # Determines winner and displays outcome of the game
         winner = determine_winner()
-        # Calculates score for final hand, cannot be abstracted as variable needs to be accessed as it is used as arguments
+        # Calculates score for final hand
         player_score, dealer_score = calculate_score(player_hand), calculate_score(dealer_hand)
         # Writes game results to CSV
         write_game_history(player_hand, player_score, dealer_hand, dealer_score, winner)
@@ -72,7 +72,7 @@ def main_menu():
             try:
                 match user_choice:
                     case '1':
-                        # Recursively starts the game or to go for another round after navigating menu
+                        # Starts the game or to go for another round after navigating menu
                         # clean_slate()
                         play_blackjack()
                     case '2':
@@ -103,6 +103,7 @@ def main_menu():
         exit_game()
 
 if __name__ == '__main__':
+    welcome()
     create_csv_file()
     init_deck()
     main_menu()

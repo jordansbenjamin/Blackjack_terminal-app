@@ -5,7 +5,7 @@ from cards import deal_card
 from player import player_hand
 from dealer import dealer_hand
 from calculate import calculate_score
-from art import thanks_logo
+from art import thanks_logo, welcome_logo, goodbye_logo, back_to_menu_logo
 
 def init_deal():
     '''This function initially deals 2 cards for the player, dealer gets dealt 1 card only because first card is revealed'''
@@ -34,6 +34,7 @@ def exit_game_to_menu():
     '''This function handles the exception message for the user when exiting the game using the ctrl + c command and leads them back to the main menu'''
 
     clear()
+    print(back_to_menu_logo)
     print(f"{fg(9)}{attr(1)}\nYou have stopped playing Blackjack. You will now be returned to the main menu.{attr('reset')}\n")
     input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
     clear()
@@ -42,6 +43,7 @@ def exit_game():
     '''This function handles the exception message for the user when exiting the game using the ctrl + c command and exits the program entirely'''
 
     clear()
+    print(goodbye_logo)
     print(f"{fg(9)}{attr(1)}\nYou have stopped playing Blackjack. You will now exit the game.{attr('reset')}\n")
     input(f"{fg(2)}{attr(1)}Press Enter to exit...{attr('reset')}")
     clear()
@@ -49,4 +51,12 @@ def exit_game():
 
 def enter_to_continue():
     '''This function simply abstracts the enter continue input'''
+    
     input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
+
+def welcome():
+    clear()
+    print(welcome_logo)
+    print("\nFor the best possible experience, please make sure your terminal or shell window is as large as possible!\n")
+    print("For example if you're on a mac, a recommended window size is 137 x 40\n")
+    enter_to_continue()

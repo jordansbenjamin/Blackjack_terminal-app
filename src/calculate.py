@@ -2,7 +2,7 @@
 from cards import cards_dict
 
 def calculate_score(player_or_dealer_hand):
-    '''This function calculates the scores of the cards from a hand, the parameter will be the hand itself, start a score from 0'''
+    '''This function calculates the scores of the cards from a hand'''
     
     score = 0
     cards = []

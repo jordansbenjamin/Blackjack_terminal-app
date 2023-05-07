@@ -21,7 +21,7 @@ cards_dict = {
 # Initialises list of suits
 suits = ['♦', '♥', '♠', '♣']
 
-# Initialises empty deck list
+# Initialises empty deck list, requires this to be global as it is accessed by the draw card function
 deck = []
 
 def init_deck():

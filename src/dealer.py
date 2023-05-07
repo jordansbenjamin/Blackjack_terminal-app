@@ -19,7 +19,7 @@ def dealer_turn():
     while dealer_score < 17:
         card = draw_card()
         dealer_hand.append(card)
-        # This code is required as the conditions checks the update hand/score
+        # This code is required as the conditions checks the updated hand/score
         dealer_score = calculate_score(dealer_hand)
         # Conditions for dealer
         if dealer_score == 21: # If dealer BJ, turn ends
