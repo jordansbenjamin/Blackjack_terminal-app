@@ -1,7 +1,1 @@
 Game,Player Hand,P. Score,Dealer Hand,D. Score,Result
-1,"['♠Q', '♥5']",15,"['♥3', '♥K', '♣3', '♠K']",26,"Dealer went over.. Lucky you, you win! 😅
-"
-2,"['♦2', '♠5', '♠6', '♠A']",24,['♦6'],6,"You went over! And that's game over.. 😩
-"
-3,"['♥2', '♠2', '♠9', '♥K']",23,['♦6'],6,"You went over! And that's game over.. 😩
-"
