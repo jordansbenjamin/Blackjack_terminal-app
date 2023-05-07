@@ -4,7 +4,8 @@
 
 ### [GitHub Repo](https://github.com/jordansbenjamin/Blackjack_terminal-app)
 
-### [Presentation](null)
+### [Presentation](https://www.youtube.com/watch?v=thUJN6MWugc)
+I apologise to the educators in advanced as I went over limit, I recorded multiple times and the best I came to was 14 minutes but there was so much necessary information I can't leave out that this is the best outcome. I hope thats okay, enjoy the walkthrough! 😅
 
 ### [Trello board](https://trello.com/b/In1uFmIe/terminal-application-t1a3)
 
@@ -14,16 +15,11 @@
 
 Blackjack fun right on the terminal, the premise is simple, try and get to 21 as close as possible without going over. This application will be a stripped down version of blackjack, with house rules made specifically for this version of the game.
 
+![bj](./docs/bj.jpg)
+
 ### House rules
 
-- The deck size is the original 52 cards including suits.
-- The Jack/Queen/King all count as 10.
-- The Ace can count as 11 or 1.
-- There are no jokers.
-- The deck of cards will be shuffled before starting a game.
-- Cards are removed from the deck as they are drawn.
-- The dealer is the computer.
-- If the player wins/lose the game before dealer starts their turn, the dealer only reveals one card. Unlike traditional Blackjack, where the dealer reveals their second card at the end of the game.
+![rules](./docs/rules.jpg)
 
 ---
 
@@ -32,6 +28,21 @@ Blackjack fun right on the terminal, the premise is simple, try and get to 21 as
 ### System Requirements
 
 To play the Blackjack program, since its a terminal application built on Python. It is a requirement that **Python 3** is installed on your computer.
+
+You can check which version of python is installed or if you have it installed at all by:
+
+#### Checking version of Python in the Terminal / shell
+
+1. Depending on your operating systems, there are different way to open the terminal/shell:
+
+- For Macintosh `CMD + space` to open spotlight, then simply type in ***terminal***
+- For Windows `Windows key + x` then select ***command prompt***. Followed by typing `bash` in the command prompt.
+
+For both operating systems, type:
+
+```shell
+python --version
+```
 
 If you don't have Python 3 already installed, please follow visit this [*website*](https://realpython.com/installing-python/) for steps on installing Python 3 to your device and operating system of choice.
 
@@ -46,32 +57,22 @@ Operating System requirements to run Python:
     - 4 GB RAM
     - 5 GB free disk space
 
-
-You can check which version of python is installed or if you have it installed at all by doing:
-
-### Opening Terminal / CLI / Bash / Shell
-
-1. Depending on your operating systems, there are different way to open the terminal:
-
-- For Macintosh `CMD + space` to open spotlight, then simply type in ***terminal***
-- For Windows `Windows key + x` then select ***command prompt***. Followed by typing `bash` in the command prompt.
-
-For both operating systems, type:
-
-```shell
-python -V
-```
-
 ### Installation steps
 
-1. Once terminal is open and Python is installed, decide where you want the application folder downloaded (like your Desktop or downloads folder for example) like so:
+1. Once terminal/shell is open and Python is installed, you can check where you are currently by typing:
+
+```shell
+pwd
+```
+
+Next, decide where you want the application folder downloaded (like your Desktop or downloads folder for example) like so:
 
 ```shell
 cd /Users/username/Desktop
 cd /Users/username/Downloads
 ```
 
-2. Next, you need to clone the [Github Repo](https://github.com/jordansbenjamin/Blackjack_terminal-app), simply copy and paste this command to your terminal:
+2. After that, you need to clone the [Github Repo](https://github.com/jordansbenjamin/Blackjack_terminal-app), simply copy and paste this command to your terminal:
 
 ```sehll
 git clone https://github.com/jordansbenjamin/Blackjack_terminal-app.git
@@ -127,7 +128,7 @@ wcwidth==0.2.6
 
 ---
 ## Features
-#### Main Menu
+### Main Menu
 
 The player will be introduced to the games Menu, just before the game begins, the player has options to do the following:
 
@@ -146,7 +147,9 @@ The player will be introduced to the games Menu, just before the game begins, th
 
 The player will be given the option to go back to the main menu after finishing a game or to continue playing straight away.
 
-#### The Player (user)
+All the options in the menu are numbered where the user type in a number, and if the user types it anything other than a number then they will be prompted to type in the correct values. This is done through exception handling, all done gracefully.
+
+### The Player (user)
 
 This feature involves how the user interacts and plays the game to either win or lose, designing the logic is important as it interacts with various parts of the program. I consider the player as a feature for this reason because it is an important piece of the game but in retrospect its made up of other pieces of the program for it to work properly.
 
@@ -161,11 +164,13 @@ During a round, the player has the option to either:
 - *Hit* for another card which is drawn from the deck.
 - *Pass* to skip their turn.
 
-Depending on the outcome of their choice for either *hitting* or *passing*, the player will either win or lose. And this can be decided based on the cards they have which involes scores, Throughout the game, the player is able to see their current cards with the respective scores. This in itself is a feature and will be explored in further detail later below.
+Depending on the outcome of their choice for either *hitting* or *passing*, the player will either win or lose. And this can be decided based on the cards they have which involes scores, Throughout the game, the player is able to see their current cards with the respective scores. This in itself is a feature and will be explored in further detail later below. 
+
+This is all done in a while loop to contnually ask the use if they want to keep drawing cards or not, and if they don't then the loop breaks and their tunr ends.
 
 But essentially, when a player has finished their turn. They will wait for the dealer to make their own decisions which is explored next.
 
-#### The Dealer (computer)
+### The Dealer (computer)
 
 This feature involves all the logic of how the computer interacts with the game and conditions for it to win, with the aim of beating the player. At the start of the game, the dealer will only be dealt one card following rules of traditional Blackjack where only one card is revealed to the player. However, the exception of this games house rule is that if the player wins or loses the game *before* the dealer starts their turn, then the dealer *never* reveals their second card.
 
@@ -179,7 +184,7 @@ The dealer (computer) decides their turn based on the condition that their card 
 
 Once the dealer finishes their turn, it will be revealed who wins/loses the game.
 
-#### Winning conditions, calculating score and the deck of cards
+### Winning conditions, calculating score and the deck of cards
 
 I mentioned earlier that the Player and Dealer features involves other elements (functions) of the program as they provide the logic of turn taking when playing a round of Blackjack based on the conditions who gets to win or lose which involves calculating the scores of both the players and dealers hand.
 
@@ -202,7 +207,7 @@ The deck of cards itself is important, as it deals with the logic of initialisin
 
 More importantly, the logic that involves how a card is drawn from the deck is as important. Where in each of the players and dealers turn they decide if they want to draw another card, if so, then the card is added to their hand and removed from the deck.
 
-#### Game history
+### Game history
 
 This feature involves the use of file handling to keep a tally of the games history based on each round the user plays. For every round:
 
@@ -213,15 +218,31 @@ This feature involves the use of file handling to keep a tally of the games hist
 
 This provides user with the information of past games played so they are able to see how they win or lose, and the user is able to view the game history from the main menu for their convenience.
 
-Not only that, but the user also has the option to wipe the games history and start fresh if they wish to do so. Giving them the flexibility and choice.
+Not only that, but the user also has the option to wipe the games history and start fresh if they wish to do so. Giving them the flexibility and choice to do so.
 
 Other internal features of the game history feature includes:
 
 - Automatically creates a new file for the user when one hasn't exist yet
 - Handles errors that includes:
     - File not found.
+        - When file hasn't been created initially.
+        - Or the file doesn't exist.
     - Permission error.
+        - If the users don't have permission, but they should.
 - When wiping the games history a new one is automatically created for convenience.
+    - I/O (Input/output) error
+        - Will occur if theres an error while writing to the file.
+
+### Quitting the game
+
+The user is able to quit the game 2 ways:
+
+- Choosing a quit option from the main menu, which will exit the game gracefully.
+- Typing the command `Ctrl + C` at any point during the running of the program which will do two things:
+    - If the user is playing a round of the Blackjack game, the command `Ctrl + C` will take them back to the main menu
+    - Otherwise at any point in the program, typing the command `Ctrl + C` will exit the program
+
+This is all done gracefully with the use of error handling, the user will be displayed a message whenever they decide to quit using that command.
 
 ---
 
@@ -233,7 +254,13 @@ To create and design this application, I decided to take roughly just under 1 we
 
 For this project, I decided to use Trello for project management which helps me keep track of tasks through the entire process. You can find the [Trello Board here](https://trello.com/b/In1uFmIe/terminal-application-t1a3).
 
+This is my Trello board in the beginning of the development planning phase:
+
+![trello start](./docs/trello/start.jpg)
+
 Here is a screenshot of some tasks I laid for the planning phase of the project I added on Trello:
+
+<img src="./docs/trello/planning.jpg" width="400">
 
 ### Algorithmic thinking
 
@@ -284,14 +311,6 @@ Trello helped me managed the development process from the planning phase, to tes
 One important takeaway, is that my trello board changed overtime as I added and removed different checklists or due dates, and even changing some parts or features of the application.
 
 So its never set in concrete, and thats great because it shows the process development process is not linear and theres room for flexibility. So unknowingly I applied Agile methodologies during this project.
-
-This is my Trello board in the beginning of the development planning phase:
-
-![trello start](./docs/trello/start.jpg)
-
-I created a checklist for planning, research and setup of the development:
-
-<img src="./docs/trello/planning.jpg" width="400">
 
 During development, I decided to ***prioritise*** the following:
 
@@ -434,7 +453,7 @@ Adding to that I also only used 2 global variables, which follows the convention
 
 ---
 
-## Frameworks, Packages & modules
+## Frameworks, Packages & Modules
 
 A list of frameworks, packages, and modules used for the Blackjack program:
 
@@ -445,6 +464,7 @@ A list of frameworks, packages, and modules used for the Blackjack program:
 - clear
 - os
 - csv
+- time
 
 ---
 

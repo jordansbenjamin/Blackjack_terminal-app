@@ -57,7 +57,7 @@ def view_game_history():
                 table.add_row(row)
             print(table)
     except FileNotFoundError:
-        print("Game history file not found. Please re-start the game and play again to create a game history.")
+        print("Game history file not found. Please re-start the program.")
 
 def wipe_game_history():
     '''This function allows the user to wipe out the game history from the CSV file for a fresh start'''
@@ -78,9 +78,9 @@ def wipe_game_history():
                     print("The game history has been sucessfully wiped out.\n")
                     break
                 except FileNotFoundError:
-                    print("Game history file not found. Please re-start the game and play again to create a game history.\n")
+                    print("Game history file not found. Please re-start the program.\n")
                     break
-            elif choice.lower() == 'no':
+            elif choice == 'no':
                 clear()
                 print(wipe_logo)
                 print("Game history file wipe out has been cancelled.\n")

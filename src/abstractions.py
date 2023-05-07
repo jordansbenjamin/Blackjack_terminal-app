@@ -46,7 +46,7 @@ def exit_game():
     clear()
     print(goodbye_logo)
     print(f"{fg(9)}{attr(1)}\nYou have stopped playing Blackjack. You will now exit the game.{attr('reset')}\n")
-    sleep(3)
+    sleep(2.2)
     clear()
     print(thanks_logo)
 
@@ -59,5 +59,5 @@ def welcome():
     clear()
     print(welcome_logo)
     print("\nFor the best possible experience, please make sure your terminal or shell window is as large as possible!\n")
-    print("For example if you're on a mac, a recommended window size is 137 x 40\n")
+    print("For example if you're on a mac, a recommended window size is 152 x 45\n")
     enter_to_continue()
