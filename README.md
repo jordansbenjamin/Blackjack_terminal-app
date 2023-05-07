@@ -49,20 +49,26 @@ Operating System requirements to run Python:
 
 You can check which version of python is installed or if you have it installed at all by doing:
 
-### Opening Terminal
+### Opening Terminal / CLI / Bash / Shell
 
 1. Depending on your operating systems, there are different way to open the terminal:
 
 - For Macintosh `CMD + space` to open spotlight, then simply type in ***terminal***
-- For Windows `Windows key + x` then select ***command prompt***
+- For Windows `Windows key + x` then select ***command prompt***. Followed by typing `bash` in the command prompt.
+
+For both operating systems, type:
+
+```shell
+python -V
+```
 
 ### Installation steps
 
-1. Once terminal is open, decide where you want the application folder downloaded (like your Desktop or downloads folder for example) like so:
+1. Once terminal is open and Python is installed, decide where you want the application folder downloaded (like your Desktop or downloads folder for example) like so:
 
 ```shell
-cd User/Desktop
-cd User/Downloads
+cd /Users/username/Desktop
+cd /Users/username/Downloads
 ```
 
 2. Next, you need to clone the [Github Repo](https://github.com/jordansbenjamin/Blackjack_terminal-app), simply copy and paste this command to your terminal:
@@ -77,7 +83,7 @@ git clone https://github.com/jordansbenjamin/Blackjack_terminal-app.git
 cd Blackjack_terminal-app/src
 ```
 
-4. After that, type these two commands separately to allow permission for executing the Blackjack program:
+4. After that, type these two commands ***separately*** to allow permission for executing the Blackjack program:
 
 ```shell
 chmod +x setup_blackjack.sh
@@ -103,7 +109,7 @@ Add a note here that for the best possible experience, the terminal window needs
 
 7. Enjoy the game! It's important to note when you quit the game, all you need to do to play again is to run the game with the command above. As a reminder: `./run_blackjack.sh`
 
-#### Dependencies
+### Dependencies
 
 The requirements to start the Blackjack program have the following dependencies, all automatically installed into the virtual envrionment when you follow the steps above:
 
@@ -267,28 +273,46 @@ I broke down the programs main requirements into smaller steps to better underst
 
 #### Flowchart
 
-I created a flowchart
+I created a flowchart in order to lay out the steps and main logic of the game, again, I wanted to focus and prioritise the main features that makes up the play of the game which the flowchart presents those steps:
+
+![flowchart](./docs/flowchart/flowchart-full.jpg)
 
 ### Keeping track of the process using Trello
 
 Trello helped me managed the development process from the planning phase, to testing, development to later polish and make changes to the codebase and all the way creating bash scripts and documentation.
 
-One important takeaway, is that my trello board changed as I added and removed different checklists or due dates, and even changing some parts or features of the application.
+One important takeaway, is that my trello board changed overtime as I added and removed different checklists or due dates, and even changing some parts or features of the application.
 
 So its never set in concrete, and thats great because it shows the process development process is not linear and theres room for flexibility. So unknowingly I applied Agile methodologies during this project.
 
+This is my Trello board in the beginning of the development planning phase:
+
+![trello start](./docs/trello/start.jpg)
+
+I created a checklist for planning, research and setup of the development:
+
+<img src="./docs/trello/planning.jpg" width="400">
+
 During development, I decided to ***prioritise*** the following:
 
-- The main features of the game which includes:
+- I decided to focus and prioritise to get the main features of the game developed, essentially the actual game itself, then build out other components like the main menu and game history file handling. The main features of the game includes:
     - The deck and cards logic
     - Logic for calculating score
     - Logic for determining winner/loser
     - Logic behind players turn and how they interact with the game
     - Logic behind dealers turn
 
-NOTE: Unit tests in between this.
+Some screenshots of the checklists I made to help keep track when developing the main features of the program:
+
+<img src="./docs/trello/cards.jpg" width="400">
+<img src="./docs/trello/player.jpg" width="400">
+<img src="./docs/trello/dealer.jpg" width="400">
+
+NOTE: I did unit tests in between this using pytest.
 
 - Organise and modularise each part to create a cohesive program, so I created a main function which involves the main flow of the game. This involves recursively calling the function when a user wants to go for another round.
+
+<img src="./docs/trello/main.jpg" width="400">
 
 - The main menu feature is next and its great because it actually interacts with the main function which handles all the modules and parts to play the game cohesively. The main menu includes:
     - Option to start the game
@@ -298,16 +322,22 @@ NOTE: Unit tests in between this.
     - Delete game history
     - Option to quit the game
 
+<img src="./docs/trello/menu.jpg" width="400">
+
 - Prioritise cleaning the codebase, removing any DRY code and adding docstrings. Organising helps a lot as it helped me navigate through the codebase better.
 
 - I continued with the file handling section of the program where it involves the writing and recording of the games history.
     - I also included an option where the user can wipe the game history if they want to.
 
+<img src="./docs/trello/history.jpg" width="400">
+
 - Lastly, for the program scanning the entire codebase to make sure there are no more bugs or typos, etc. Also creating bash scripts for execution and documentation.
 
 Again for convenience, please find the [Trello Board here](https://trello.com/b/In1uFmIe/terminal-application-t1a3).
 
-These are screenshots of different cards and sections of my trello board:
+I added new cards in Trello for different tasks for me to track which is created throughout during development, like so:
+
+<img src="./docs/trello/others.jpg" width="190">
 
 ---
 
@@ -386,7 +416,7 @@ This test suit is really 2 different tests but I included them as one because th
 
 This test passed as expected!
 
-#### TEST RESULTS:
+#### Test results
 
 Have a look at the results of all the tests I've done for this program [here.](https://github.com/jordansbenjamin/Blackjack_terminal-app/blob/main/src/test_results.txt)
 
@@ -404,9 +434,9 @@ Adding to that I also only used 2 global variables, which follows the convention
 
 ---
 
-## Frameworks and Packages
+## Frameworks, Packages & modules
 
-A list of frameworks and packages used for the Blackjack program:
+A list of frameworks, packages, and modules used for the Blackjack program:
 
 - pytest
 - numpy
@@ -414,6 +444,7 @@ A list of frameworks and packages used for the Blackjack program:
 - prettytable
 - clear
 - os
+- csv
 
 ---
 
