@@ -44,8 +44,6 @@ def write_game_history(player_hand, player_score ,dealer_hand, dealer_score ,win
             writer.writerow([game_num, player_hand, player_score, dealer_hand, dealer_score, winner])
     except IOError:
         print("An error occurred while writing to the file.")
-    except Exception as Error:
-        print(f"An error occurred while writing to the file: {str(Error)}")
 
 def view_game_history():
     '''This function will allow the user to view the game history which is recorded and written in the CSV, it also implements prettytable for a better viewing experience'''

@@ -89,8 +89,9 @@ def main_menu():
                         wipe_history()
                     case '6':
                         # Exits the program entirely
-                        clear()
-                        print(thanks_logo)
+                        # clear()
+                        # print(thanks_logo)
+                        exit_game()
                         break
                     case _:
                         clear()

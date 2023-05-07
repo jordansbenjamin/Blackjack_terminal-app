@@ -1,1 +1,17 @@
 Game,Player Hand,P. Score,Dealer Hand,D. Score,Result
+1,"['♠A', '♥10']",21,"['♥8', '♠8', '♦K']",26,"Instant win! With a natural Blackjack 🤠
+"
+2,"['♠Q', '♥2', '♦6']",18,"['♦8', '♠2', '♦10']",20,"You lost... The dealer has a higher score 🙃
+"
+3,"['♠9', '♦3', '♠6']",18,"['♥K', '♥6', '♠3']",19,"You lost... The dealer has a higher score 🙃
+"
+4,"['♠J', '♥7']",17,"['♥3', '♦J', '♦7']",20,"You lost... The dealer has a higher score 🙃
+"
+5,"['♥A', '♦Q']",21,"['♠5', '♣7', '♣4', '♠10']",26,"Instant win! With a natural Blackjack 🤠
+"
+6,"['♥5', '♥4', '♥Q']",19,"['♦2', '♣A', '♣6']",19,"It's a draw! 🥲
+"
+7,"['♥9', '♣J']",19,"['♠7', '♣9', '♥J']",26,"Dealer bust! Lucky you, you win! 😅
+"
+8,"['♠Q', '♠J']",20,"['♣4', '♥2', '♣7', '♣3', '♦5']",21,"You lose.. Dealer wins with a Blackjack 😤
+"

@@ -1,4 +1,5 @@
 ##### ABSTRACTIONS #####
+from time import sleep
 from colored import fg, attr
 from clear import clear
 from cards import deal_card
@@ -36,7 +37,7 @@ def exit_game_to_menu():
     clear()
     print(back_to_menu_logo)
     print(f"{fg(9)}{attr(1)}\nYou have stopped playing Blackjack. You will now be returned to the main menu.{attr('reset')}\n")
-    input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}")
+    input(f"{fg(2)}{attr(1)}Press Enter to continue...{attr('reset')}\n")
     clear()
 
 def exit_game():
@@ -45,7 +46,7 @@ def exit_game():
     clear()
     print(goodbye_logo)
     print(f"{fg(9)}{attr(1)}\nYou have stopped playing Blackjack. You will now exit the game.{attr('reset')}\n")
-    input(f"{fg(2)}{attr(1)}Press Enter to exit...{attr('reset')}")
+    sleep(3)
     clear()
     print(thanks_logo)
 
