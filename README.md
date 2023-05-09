@@ -5,7 +5,6 @@
 ### [GitHub Repo](https://github.com/jordansbenjamin/Blackjack_terminal-app)
 
 ### [Presentation](https://www.youtube.com/watch?v=thUJN6MWugc)
-I apologise to the educators in advanced as I went over limit, I recorded multiple times and the best I came to was 14 minutes but there was so much necessary information I can't leave out that this is the best outcome. I hope thats okay, enjoy the walkthrough! 😅
 
 ### [Trello board](https://trello.com/b/In1uFmIe/terminal-application-t1a3)
 
