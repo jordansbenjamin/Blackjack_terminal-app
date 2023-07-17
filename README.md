@@ -4,7 +4,7 @@
 
 ### [GitHub Repo](https://github.com/jordansbenjamin/Blackjack_terminal-app)
 
-### [Presentation](https://www.youtube.com/watch?v=thUJN6MWugc)
+### Presentation (Provided to CoderAcademy)
 
 ### [Trello board](https://trello.com/b/In1uFmIe/terminal-application-t1a3)
 
